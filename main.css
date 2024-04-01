@@ -27,10 +27,11 @@
     }
 
 .back {
-    background-color: transparent;
+    background-color: white;
     height: 50px;
     border: none;
     border-right: 2px solid;
+    border-left: 2px solid;
 
 
     position: absolute;
@@ -45,7 +46,13 @@
     text-align: left; /* Align text to left */
 }
 
+.back:hover {
+background-color: #cfd1ed;
+}
+
 body {
+background-color:#cfd1ed;
+color:#ab5b0b;
 margin: 0;
       
 font-family: "Alamari", sans-serif;
@@ -150,6 +157,13 @@ body.serif {
     align-items: center;
 }
 
+.demo-container {
+    display: flex;
+   flex-direction: column;
+   gap: 10px;
+   padding: 10px;
+}
+
 .font-selector {
     padding: 20px 0;
     display: flex;
@@ -159,14 +173,23 @@ body.serif {
 
 
 h1 {
+    background-color: white;
     text-align: center;
-    margin: 0;
     padding-top: 3px;
     border-top: 2px solid;
     border-bottom: 2px solid;
     width: 100%;
+    margin: 0;
 }
 
+h2 {
+    text-align: center;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    width: 100%;
+    padding: 10px;
+    
+}
 
 .image-center {
     text-align: center;
@@ -189,6 +212,8 @@ h1 {
     flex-direction: column;
     align-items: center;
 }
+
+
 
 .menu-button {
     width: 20vw;
@@ -240,10 +265,9 @@ h1 {
     }
 
 .middle-section {
+    width: 60vw;
 
     padding-top: 50px;
-
-    width: 60vw;
 
     border-left: 2px solid;
     border-right: 2px solid;
@@ -261,28 +285,40 @@ h1 {
     text-align: left;
     }
 
-    .middle-section li {
-        max-width: 700px;
+.middle-section li {
+    max-width: 700px;
+}
 
-        }
+.next-page {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+}
 
-        .next-page {
-            width: fit-content;
-            position: relative;
-            bottom: 0;
-            margin-bottom: 30px;
-            border: 2px solid;
+.next-page-button {
+    background-color: white;
 
-            background-color: transparent;
-        height: 50px;
-  
+    width: fit-content;
+    height: fit-content;
+
+    margin-bottom: 30px;
+
+    border: 2px solid;
     font-size: 1.5rem;
     border-radius: 3px; 
 
+    position: relative;
+    bottom: 0;
 
     cursor: pointer;
     padding: 10px;
         }
+
+.next-page-button:hover {
+    background-color:#cfd1ed;
+}
 
 .open .close-button {
     display: block; /* Show close button when menu is opened */
@@ -336,7 +372,29 @@ h1 {
 
 
 
+/* COLOR CHANGE 1 (WHITE BACKGROUND BLACK TEXT)  */
 
+body.color-change-1 {
+    background-color: white;
+    color: black;
+}
 
+.menu-button.color-change-1 {
+    border: none;
+}
 
+/* COLOR CHANGE 2 (BLACK BACKGROUND WHITE TEXT)  */
+
+body.color-change-2 {
+    background-color: black;
+    color: white;
+}
+
+h1.color-change-2 {
+    background-color: black;
+}
+
+a.color-change-2 {
+    color: #addf9d;
+}
 

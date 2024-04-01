@@ -13,6 +13,7 @@ $("#font-selector").change(function() {
       $("body").toggleClass("color-change-1");
       $(".sidepanel").toggleClass("color-change-1");
       $("a").toggleClass("color-change-1");
+      $(".menu-button").toggleClass("color-change-1");
 
     }
   );
@@ -25,6 +26,8 @@ $("#font-selector").change(function() {
       $(".color-change-1").toggleClass("color-change-2");
       $(".menu-items").toggleClass("color-change-2");
       $(".top-menu").toggleClass("color-change-2");
+      $("h1").toggleClass("color-change-2");
+      $("a").toggleClass("color-change-2");
 
     }
   );

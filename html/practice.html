@@ -31,9 +31,9 @@
 
                 <li> <a href="intro-to-alt-text.html">An introduction to alt text</a> </li>
 
-                <li> <a href="practice.html">An opportunity to practice</a> </li>
-
                 <li> <a href="workshop.html">Workshop</a> </li>
+
+                <li> <a href="practice.html">Practice</a> </li>
 
                 <li> <a href="resource-library.html">Resource Library</a> </li>
 
@@ -43,27 +43,29 @@
 
     <div class="middle-section">
         <div class="main-text-container">
-        <h1 style="text-align: center;">An Opportunity to Practice</h1>
+        <h1 style="text-align: center;">An opportunity to practice</h1>
         <p> (Insert instructions / prompt. Have users be able to submit their response. Thinking maybe have people be able to click each photo and it takes you to it's own page for that specific photo with all the submitted reponses? Maybe have a character counter that people can use to try and practice keeping their alt text brief?)</p>
 
         <a href="practice-photo-1.html">
             <img src="../pics/lacey-white-flowers-sit-in-outstretched-water.jpg" alt="Delicate, lacey, white flowers poke out of water that reflects a blue sky with soft, white clouds." style="max-width: 400px; padding-bottom: 40px;">
         </a>
 
-        <img src="../pics/singular-ripple-in-lake.jpg" alt="A circular ripple in calm water that reflects a line of trees."  style="max-width: 400px;padding-bottom: 40px;">
+        <div class="next-page">
+            Next page
+            
+             <button class="next-page-button">
+                 <a href="resource-library.html">Resource library</a>
+             </button>
+         </div>
 
-        <img src="../pics/frog-with-butterfly-hat.png" alt="2 vertically stacked images of a treefrog with a butterfly. In the first photo, the frog kisses the butterfly and in the second, the butterfly rests on the frog's head, almost like a hat." style="max-width: 400px; padding-bottom: 40px;">
 
-        <button class="next-page">
-            <a href="workshop.html">Workshop</a>
-        </button>
     </div>
 </div>
 
     <div class="right-section">
         <div class="top-menu" id="customizeMenu">
-            <button class="menu-button" onclick="toggleCustomize()" style="display: flex; justify-content: center;"> 
-                <img src="../pics/customize.png" alt="Customize page."> 
+            <button class="menu-button" onclick="toggleCustomize()" style="display: flex; justify-content: flex-start;"> 
+                <img src="../pics/customize.png" alt="Customize page.">Customize
             </button>
             <button class="close-button" onclick="toggleCustomize()">&times;</button>
             <div class="customize">
