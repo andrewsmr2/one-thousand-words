@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resource Library</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <html lang="en">
+            
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" type="image/png" href="">
+
+    <link rel="stylesheet" href="https://use.typekit.net/fgh5uly.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Lora?stroke=Serif">
+
+</head>
+    
+<body>
+
+<div class="main-container">
+
+    <div class="left-side">
+
+    <div class="left-side-image">
+        <img class="left-side-image" src="../pics/left-side.png" alt=" ">
+    </div>
+
+    <div class="left-side-image-white-background">
+        <img class="left-side-image-white-background" src="../pics/left-side-white-background.png" alt=" ">
+    </div>
+
+    <div id="mySidepanel" class="sidepanel">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <a href="../html/index.html">Home</a>
+            <a href="../html/about.html">About</a>
+            <a href="../html/intro-to-alt-text.html">An introduction to alt text</a>
+            <a href="../html/practice.html">An opportunitity to practice</a>
+            <!-- <a href="../html/workshop.html">Workshop</a> -->
+            <a href="../html/library.html">Resource Library</a>
+            <!-- <a href="../html/acknowledgements.html">Acknowledgements</a> -->
+            <!-- <a href="../html/contact.html">Contact</a> -->
+        
+        
+                
+            <div class="font-selector">
+                <label for="font-selector" class="select-font">Select font-type:</label> <br>
+                
+                <select class="select-font-button" id="font-selector" autocomplete="off">
+
+                    <option selected="selected" value="sans-serif">sans serif</option>
+                    <option value="serif">serif</option>
+                    <option value="open-dyslexic">open dyslexic</option>
+                    <option value="comic-sans">comic sans</option>
+                
+                </select>
+            </div> <!-- font selector -->
+
+
+            <div class="color-change-container">
+
+                <!-- white background, black text -->
+                <div class="color-change-1">
+                    <button onclick="changeColor('color-change-1')">Change colors</button>
+                </div>
+
+                <!-- black background, white text -->
+                <div class="color-change-2">
+                    <button onclick="changeColor('color-change-2')">Change colors</button>
+                </div>
+
+                <!-- blue background, pink text -->
+                <div class="color-change-3">
+                    <button onclick="changeColor('color-change-3')">Change colors</button>
+                </div>
+
+             </div> <!-- color-change container -->
+
+        
+        </div> <!-- sidepanel -->
+
+        <button class="openbtn" onclick="openNav()">&#9776; Site Menu</button>
+
+    </div> <!-- left side -->
+
+<div class="right-side">
+
+    <main>
+
+    <header> 
+        <h1 style="text-align: center;">Resource Library / Sources</h1>
+    </header>
+
+
+
+    <ul>
+        <li> 
+            <a href=""> </a>
+        </li>
+    </ul>
+
+    <ul>
+        <li> 
+            <a href="https://alt-text-as-poetry.net/" target="_blank" rel="noreferrer noopener">  Alt Text as Poetry </a> 
+            <ul>
+                <li>
+            project by Bojana Coklyat and Shannon Finnegan
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul>
+        <li> 
+            <a href="https://www.perkins.org/resource/how-write-alt-text-and-image-descriptions-visually-impaired/" target="_blank" rel="noreferrer noopener"> How to write alt text and image descriptions</a> 
+            
+            <ul>
+                <li>
+            article by <a href="https://veroniiiica.com/" target="_blank" rel="noreferrer noopener">Veronica Lewis / Veronica With Four Eyes </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+          
+
+
+</div> <!-- right -->
+
+</div> <!-- main container -->           
+            
+    </main>
+    
+    
+    <script src="../javascript/jquery-3.7.1.min.js"></script>
+    <script src="../javascript/scripts.js"></script>
+
+    
+    <script>
+
+
+        function openNav() {
+        document.getElementById("mySidepanel").style.width = "27vw";
+        }
+    
+        /* Set the width of the sidebar to 0 (hide it) */
+
+        function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+        } 
+
+    </script>
+    
+    
+</body>
+</html>

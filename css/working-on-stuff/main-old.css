@@ -1,0 +1,531 @@
+* { 
+box-sizing: border-box;
+}
+
+a {
+  color: #ec744c;
+}
+
+@font-face {
+  font-family: 'open dyslexic';
+  src: url('../fonts/opendyslexic-regular-webfont.woff2') format('woff2'),
+        url('../fonts/opendyslexic-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'comic sans';
+  src: url('../fonts/comicsans-webfont.woff2') format('woff2'),
+        url('../fonts/comicsans-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Book Antiqua';
+  src: url('../fonts/book-antiqua-webfont.woff2') format('woff2'),
+        url('../fonts/book-antiqua-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #2e29cc;
+  color:#f7c3ca;
+  margin: 0;
+
+  font-family: "Alamari", sans-serif;
+
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+body.color-change-1 {
+  background-color: white;
+  color: black;
+}
+
+body.color-change-2 {
+  background-color: #181817;
+  color: #e1eade;
+}
+
+body.color-change-3 {
+  background-color: #2e29cc;
+  color:#f7c3ca;
+}
+
+body.comic-sans {
+  font-family: 'comic sans'
+}
+
+body.open-dyslexic {
+  font-family: 'open dyslexic';
+}
+
+body.serif {
+  font-family: "Book Antiqua", serif;
+}
+
+.color-change-1 button {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+
+  background-color: white;
+  color: black;
+}
+
+.color-change-1 button:hover {
+  border: 2px solid black;
+  outline: 1px solid white;
+  box-shadow: 0 0 20px black;
+}
+
+.color-change-2 button {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid white;
+  cursor: pointer;
+
+  background-color: #181817;
+  color: #e1eade;
+}
+
+.color-change-2 button:hover {
+  border: 2px solid white;
+  outline: 1px solid black;
+  box-shadow: 0 0 20px #181817;
+}
+
+.color-change-3 button {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid white;
+  cursor: pointer;
+
+  background-color: #2e29cc;
+  color: #f7c3ca;
+}
+
+.color-change-3 button:hover {
+  border: 2px solid white;
+  outline: 1px solid black;
+  box-shadow: 0 0 20px #2e29cc;
+}
+
+.color-change-container {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.demo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  gap: 20px;
+}
+
+.font-selector {
+  position: absolute; 
+  bottom: 30px;
+  left: 30px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+  margin: 40px 0 40px 0;
+  border-top: 2px solid #f7c3ca;
+  border-bottom: 2px solid #f7c3ca;
+}
+
+h1.color-change-1 {
+  color: black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+h2 {
+  color: white;
+}
+
+h2.color-change-1 {
+  color: black;
+}
+
+.home-link-container {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.iframe-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-center {
+  text-align: center;
+}
+
+.intro-p {
+text-align: left;
+}
+
+.left-side {
+  width: 27vw;
+  border-right: 4px solid;
+  z-index: 30;
+}
+
+.left-side-image.color-change-1 {
+display: none;
+}
+
+.left-side-image-white-background.color-change-1 {
+  display: block;
+}
+
+.left-side-image-white-background {
+    display: none;
+    position: fixed;
+    width: 27vw;
+    height: 100vh;
+}
+
+.left-side-image img {
+  position: fixed;
+  width: 27vw;
+  height: 100vh;
+}
+
+main {
+  max-width: 75vw;
+}
+
+.main-container {
+  display: flex;
+}
+
+.main-container-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mobile-disappear {
+  display: block inline;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  background-color:white;
+  color: #2e29cc;
+  width: 27vw;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border: none;
+
+  cursor: pointer;
+  position: fixed;
+  text-align: left;
+
+}
+
+
+.openbtn:hover {
+  background-color: #cac3de;
+  color: #2e29cc;
+} 
+
+.right-side {
+  width: 73vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  z-index: 3;
+}
+
+.select-font {
+  color: #181817;
+  font-size: 1rem;
+}
+
+.select-font.color-change-2 {
+  color: #e1eade;
+}
+
+.select-font-button {
+  background-color: white;
+}
+
+.select-font-button:hover {
+  background-color: #2e29cc;
+  color: white;
+
+}
+
+.sidenote {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+The sidepanel menu
+.sidepanel {
+  background-color: #cac3de;
+  height: 100vh; 
+  width: 0; /* 0 width - change this with JavaScript */
+  padding-top: 60px; /* Place content 60px from the top */
+
+  position: fixed; 
+  top: 0;
+  left: 0;
+
+  z-index: 7; /* Stay on top */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.4s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+      
+/* The sidepanel links */
+.sidepanel a {
+  display: block;
+
+  color: #2e29cc;
+  font-size: 1.3rem;
+  padding: 8px 8px 8px 32px;
+
+  text-decoration: none;
+  transition: 0.3s;
+}
+      
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  background-color: #2e29cc;
+  color: #e1eade;
+  box-shadow: 0 0 20px #2e29cc;
+}
+      
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+    font-size: 2rem;
+    width: fit-content;
+    padding: 0 10px 0 10px;
+
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+
+.sidepanel .closebtn:hover {
+  background-color: black;
+  color: white;
+
+}
+
+.sidepanel.color-change-1 {
+  background-color: white;
+}
+
+.sidepanel.color-change-2 {
+  background-color: #181817;
+  color: #e1eade;
+}
+
+.sidepanel.color-change-2 a {
+  color: #e1eade;
+}
+
+        /* Style for the top menu */
+        .top-menu {
+          background-color: goldenrod; /* Change as needed */
+          color: white; /* Change as needed */
+          width: 100%;
+          height: 50px; /* Initial height */
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 999; /* Ensure it's above other elements */
+          transition: height 0.4s; /* Transition effect */
+          overflow: hidden; /* Hide overflow content */
+      }
+
+      /* Style for the menu button */
+      .menu-button {
+          background-color: transparent;
+          color: white; /* Change as needed */
+          border: none;
+          font-size: 1.5rem;
+          cursor: pointer;
+          padding: 10px;
+          position: fixed;
+          top: 0;
+          left: 0;
+      }
+
+      /* Style for the close button */
+      .close-button {
+          background-color: transparent;
+          color: white; /* Change as needed */
+          border: none;
+          font-size: 1rem;
+          cursor: pointer;
+          padding: 10px;
+          position: fixed;
+          top: 0;
+          right: 0;
+          display: none; /* Initially hidden */
+      }
+
+      /* Style for the menu items */
+      .menu-items {
+          padding: 0;
+          margin: 0;
+          text-align: left;
+          display: none; /* Initially hidden */
+          position: absolute;
+          top: 50px; /* Push the items below the top menu */
+          width: 100%;
+
+      }
+
+      .menu-items li {
+          padding: 8px;
+      }
+
+      /* Show the menu items when the top menu is open */
+      .top-menu.open .menu-items {
+          display: block;
+      }
+
+      /* Show the close button when the top menu is open */
+      .top-menu.open .close-button {
+          display: block;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Lora', serif;
+    }
+
+    .top-menu {
+        background-color: goldenrod;
+        color: white;
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+
+    .menu-button {
+        background-color: transparent;
+        color: white;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .close-button {
+        background-color: transparent;
+        color: white;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .menu-items {
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        display: none;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+    }
+
+    .top-menu.open .menu-items {
+        display: block;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: row;
+        margin-top: 50px; /* Adjust for the height of the top menu */
+    }
+
+    .left-section,
+    .right-section {
+        width: 20%;
+        height: 100vh; /* Adjust as needed */
+        overflow: hidden;
+    }
+
+    .middle-section {
+        width: 60%;
+        overflow-y: auto; /* Enable vertical scrolling */
+        padding: 20px;
+    }
+
+    .middle-section p {
+        max-width: 75ch;
+        font-size: 1.2rem;
+    }
+
+
+
+          
+      ___________________________________________________________________________________
+      /* mobile */
+      @media screen and (max-width: 375px) {
+
+        .left-section {
+          display: none;
+        }
+
+        .right-section{
+          display: none;
+        } 
+
+        
+  
+        }
+      
+        ___________________________________________________________________________________
+      /* tablet */
+      @media screen and (max-width: 768px) {
+
+  
+        
+      
+        }
+      
+        ___________________________________________________________________________________
+      /* desktop */
+      @media screen and (max-width: 1200px) {
+        
+      
+        }
+
+

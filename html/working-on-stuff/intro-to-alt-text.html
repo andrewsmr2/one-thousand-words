@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Intro to alt text </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <html lang="en">
+            
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" type="image/png" href="../pics/favicon.png">
+
+    <link rel="stylesheet" href="https://use.typekit.net/fgh5uly.css">
+
+</head>
+    
+<body>
+
+<div class="main-container">
+<div class="left-side">
+
+    <div class="left-side-image">
+        <img class="left-side-image" src="../pics/left-side.png" alt=" ">
+    </div>
+
+    <div class="left-side-image-white-background">
+        <img class="left-side-image-white-background" src="../pics/left-side-white-background.png" alt=" ">
+    </div>
+
+    <div id="mySidepanel" class="sidepanel">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <a href="../../index.html">Home</a>
+            <a href="../html/about.html">About</a>
+            <a href="../html/intro-to-alt-text.html">An introduction to alt text</a>
+            <a href="../html/practice.html">An opportunitity to practice</a>
+            <a href="../html/workshop.html">Workshop</a>
+            <a href="../html/library.html">Resource Library</a>
+            <!-- <a href="../html/acknowledgements.html">Acknowledgements</a> -->
+        
+                
+            <div class="font-selector">
+                <label for="font-selector" class="select-font">Select font-type:</label> <br>
+                
+                <select class="select-font-button" id="font-selector" autocomplete="off">
+
+                    <option selected="selected" value="sans-serif">sans serif</option>
+                    <option value="serif">serif</option>
+                    <option value="open-dyslexic">open dyslexic</option>
+                    <option value="comic-sans">comic sans</option>
+                
+                </select>
+            </div> <!-- font selector -->
+
+
+            <div class="color-change-container">
+
+                <!-- white background, black text -->
+                <div class="color-change-1">
+                    <button>White background, black text</button>
+                </div>
+
+                <!-- black background, white text -->
+                <div class="color-change-2">
+                    <button>Black background, white text</button>
+                </div>
+
+                <!-- blue background, pink text -->
+                <div class="color-change-3">
+                    <button>Default colors</button>
+                </div>
+
+             </div> <!-- color-change container -->
+
+        
+        </div> <!-- sidepanel -->
+
+        <button class="openbtn" onclick="openNav()">
+            &#9776; Site Menu </button>
+
+    </div> <!-- left side -->
+
+    <div class="right-side">
+
+    <main>
+
+    <header> 
+        <h1 style="text-align: center;">An Introduction to Alt Text </h1>
+    </header>
+       
+                
+        <p> Alt text (short for alternative text) is a written description of an image displayed on a digital device with a screen (such as a computer, smartphone or tablet). </p>
+
+        <!-- <img src="" alt=""> Insert photo of computer, smartphone  -->
+        
+        <p>Alt text can be added to:
+        
+        <ul>
+            <li>images / graphics posted online</li>
+            <ul>
+                <li>(for example: images found on websites or certain social media apps) </li>
+            </ul>
+        </ul>
+
+        <ul>
+            <li>images / graphics in digital documents </li>
+            <ul>
+                <li>(for example: PDFs, Microsoft Word documents / Google docs, etc.)</li>
+            </ul>
+        </ul>
+
+        <!-- insert resource where they explain this for me -->
+
+        </p>
+    
+        <p>Alt text makes visual content (such as pictures) accessible to people who are blind, who have low vision, or who have certain cognitive disabilities. </p> 
+        
+        <!-- <p> Many people who are blind, who have low vision or have differences in visual processing use something called a screen reader as a form of assistive technology.  -->
+
+        <p>Alt text gets read by something called a screen reader, which is a form of assistive technology commonly used by people who are blind, have low vision or experience differences in visual processing.
+        </p>
+            
+        A screen reader is basically a type of software that reads the content on a screen (computer screen, phone screen, etc.) and relays back the content information to the person using the screen reader. </p>
+            
+        <p>It can do this in 1 of 2 ways - either by reading it out loud with a synthetic (computer generated) voice or by providing the information on a refreshable braille display. A screen reader user can also use both of these outputs at the same time. </p>
+        </p>
+    
+        <div class="demo-container">
+
+            <div class="iframe-continaer">
+                <iframe width="420" height="315"
+                    src="https://www.youtube.com/watch?v=AOkkLzNgXhU">
+                </iframe> 
+                
+                <p style="text-align: center;">How a screen reader works </p>
+            </div> <!-- iframe-container -->
+
+            <p style="background-color: red;"> Insert picture/videp of refreshable braille display. Maybe get better video of screen reader demo</p>
+    
+            <!-- <div class="iframe-continaer">
+                <iframe width="420" height="315"
+                    src="https://www.youtube.com/watch?v=dEbl5jvLKGQ&t=152s">
+                </iframe> 
+                
+                <p style="text-align: center;">Screen reader demo. </p>
+            </div> iframe-container
+    
+
+            <div class="iframe-container">
+                <iframe width="420" height="315"
+                    src="https://youtube.com/shorts/Gug23VRlsGg?si=lDysbjViJlqRB9wl">
+                </iframe> 
+
+                <p style="text-align: center;">Refreshable Braille Display demo </p>
+            </div> iframe-container -->
+    
+        </div> <!-- demo container -->
+    
+    
+        <p> With no alt text present, people with visual disabilities may miss out on vital information within your webpage / document. 
+        </p>
+
+        <p> <i>
+        (**NOTE- there are instances when no alt text is needed- I'll touch on that later!) </i>
+        </p>
+    
+        <h2>Other ways alt text is used</h2>
+    
+        <p> Alt text is a crucial part of web accessibility, as I explained above. But it also serves a few other purposes. For example, if an image fails to load on a webpage - the alt text will show up instead (if there is alt text provided). </p>
+                
+    <div class="image-center">
+        <img src="../pics/example-image-not-loaded.png" alt="3 sections of text with graphic examples underneath them. First section reads 'Digital image that loaded correctly' and has picture of St. Isidore of Seville underneath. Second section reads 'Digital image that did not load correctly and does not have alt text' and has blank box with small icon representing a picture inside. Third section reads 'Digital image that did not load correctly and does have alt text' and has same small icon with alt text that reads 'St. Isidore of Seville'." style="width: 60%; padding: 20px 0 15px 0;"> 
+    </div> <!-- image center -->
+                <p>  The image above (found 
+                    <a href="https://udayton.edu/blogs/onlinelearning/2021/07_07_2021_alttext.php"> here on this website</a>)
+                    shows what happens when an image doesn't load correctly. If there is alt text provided for the image, the viewer can still find out what information you're trying to provide.
+                </p>
+    
+        <p>Alt text also plays a role with SEO (Search Engine Optimization). I won't be discussing SEO in this website, though. We'll be looking at alt text as an accessibility tool above all else. </p> 
+                
+       
+        <h1>The origins of alt text</h1>
+    
+        <p>The concept of alt text originates from the “alt” attribute (also known as alt tag or alt description) in HTML, which is a coding language used to build websites. <br><br>
+                
+        <i>(**NOTE- If you don't know how to code- no worries!! You don't have to be someone who codes in order to provide alt text. If this section feels hard to follow, feel free to skip ahead to the next section titled "Alt text for non-coders")</i>
+    
+        <p>If you do want to talk code for a second- let's do it! </p>
+    
+        <p> This is how you code an image in HTML: <br>
+            &lt;img src="<i>insert image file name here</i>" alt="<i>insert alt text here</i>"&gt;
+        </p>
+    
+                <p> The part where it says “alt”- that’s where you include your alt text (a description of the image you are coding). 
+              </p>
+    
+              <p>"Alt" is short for alternative. The alt attribute was introduced in HTML 2.0, which was published in 1995 by the Internet Engineering Task Force (IETF). 
+              </p>
+     
+                <h1>Alt text for non-coders</h1>
+    
+                <p> Don't know how to code? That's no problem at all! A lot of programs offer the opportunity to provide alt text without having to touch any code. 
+                </p>
+    
+                <img src="../pics/form-field-example.png" alt="Screenshot of Google doc with a picture of a dog sitting by a lake. Highlighted in a bright red box is the alt text option in the right click menu as well as the form field where you can enter alt text. Alt text reads 'Happy dog sits in front of lake on sunny, summer day.'" style="width: 100%; padding-top: 10px;">
+    
+                <p> Here is one example- this is a Google Doc. When you right click on an image in Google Docs, you can then click on "Alt Text", which will open up a textbox where you can type in your alt text! 
+                </p>
+    
+                <p> Each program is going to be a little different when it comes to adding alt text (and some programs / websites unfortunately do not have direct, built in ways of providing alt text). Doing a quick Google search can let you know whether or not it's possible to add alt text in a direct / built in way (like the example I showed in Google Docs), and how to do so. There are workaround ways of adding alt text, one of which is providing an image description in the image caption or nearby text (I'll touch on this new term "image description" in just a second!).
+    
+                <p>
+                    Here are a few places where you can add alt text without touching any code: 
+                    <ul>
+                        <li>Certain social media platforms:
+                            <ul>
+                                <li> Instagram, Facebook, Twitter, Pinterest, Tumblr, LinkedIn
+                                </li>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.perkins.org/how-to-add-alt-text-on-social-media/" target="_blank" rel="noreferrer noopener"> How to add alt text on social media </a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </li>
+    
+                        <li> Google Workspace 
+                            <ul>
+                                <li> Google Docs, Slides, Sheets
+                                </li>
+                                <ul>
+                                    <li>
+                                        <a href="https://support.google.com/docs/answer/6199477?hl=en" target="_blank" rel="noreferrer noopener">How to add alt text to Google Docs, Slides & Sheets
+                                        </a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </li>
+    
+                      <li> Microsoft Office
+                            <ul>
+                                <li> Microsoft Word, PowerPoint, Excel, Outlook
+                                </li>
+                                <ul>
+                                    <li>
+                                        <a href="https://support.microsoft.com/en-us/office/add-alternative-text-to-a-shape-picture-chart-smartart-graphic-or-other-object-44989b2a-903c-4d9a-b742-6a75b451c669" target="_blank" rel="noreferrer noopener"> How to add alt text in Microsoft Word, PowerPoint, Excel & Outlook </a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </li>
+    
+                        <li> Adobe Acrobat
+                            <ul>
+                                <li> This is one way to add alt text to PDFs!
+                                </li>
+                                <ul>
+                                    <li>
+                                        <a href="https://csuf.screenstepslive.com/m/96806/l/1474315-alt-text-for-images-in-adobe-acrobat-pdf" target="_blank" rel="noreferrer noopener">How to add alt text to a PDF in Adobe Acrobat</a>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </li>
+
+                        <li> Websites commonly used by designers:
+                            <ul>
+                                <li> Are.na (to images you upload yourself- not reposts), Behance, Canva, Wix 
+                                </li>
+                            </ul>
+                        </li>
+    
+                    </ul>
+                </p>
+    
+                <h1> Image description vs. alt text </h1>
+    
+                <p> If you dive into the world of alt text, you will likely encounter the term "image description". Alt text is technically a form of image description (in the sense that you are partaking in the act of describing an image) but when it comes to web accessibility, there are some differences between the terms "alt text" and "image description".</p>
+
+                <p>Here are the main differences:</p>
+
+                <p><b>Location:</b> Alt text and image descriptions are “stored” in different places. Alt text is usually attached to an image, while image descriptions might be in the caption or nearby text.  </p>
+
+                <p><b>Visibility:</b> Alt text is usually only seen by screen readers. For example the image below is an example of an image with just alt text.</p> 
+
+                <img src="../pics/drooping-stars-of-bethlehem.jpg" alt="Medium sized white, drooping flowers on a green hill under a blue sky." style="width: 40%;">
+                    
+                <p>Now this is an example of an image with an image description. This is a 
+                
+                <a href="https://twitter.com/DogsTrust/status/1646528737259978755?s=20" target="_blank" rel="noreferrer noopener"> post on Twitter </a> and the author has included the image description in the caption of the post. So viewers with the ability to see will be able to see the image description, due to the location in which it's being put (it's not hiding in the back-end stuff).</p>
+
+                <img src="../pics/image-description-example.png" alt="Screenshot of a twitter post displaying an image description above a photo. The post from Dogs Trust reads 'When someone says they're not a dog person. Image description:
+                White and brown Lurcher close up looking directly at the camera with his eyes slightly squinting giving a look of judgement. His ears are floppy and he has a black snoot.White and brown Lurcher close up looking directly at the camera with his eyes slightly squinting giving a look of judgement. His ears are floppy and he has a black snoot.' " style="width: 40%;">
+
+                <p> <b>Length:</b> Alt text is limited to 100-250 characters, while image descriptions can be longer, like 280 characters, which is the length of a tweet.</p>
+
+                <p><b>Level of Detail:</b> Image descriptions can offer more detail about visual elements compared to alt text because of their larger character limit. For instance, alt text might say "puddle on the floor," while an image description might describe it as "a puddle of orange juice on a white tiled kitchen floor."</p>
+
+                <p><b>Platform Policies:</b> Different social media platforms have different rules for alt text length and editing options.</p>
+
+                <p>talk about the question should i write alt text or an image description?</p>
+
+    
+                <h1>How do you write alt text?</h1>
+    
+                <p> So how exactly do you write alt text / image descriptions? 
+                    While there are things to avoid when writing alt text- alt text is unique in that there is not just one, singular correct way to write it. <span style="background-color: yellow;"> ****Work on this paragraph </span> 
+                </p>
+    
+                <p style="background-color: yellow;"> (Maybe insert short, summarized paragraph about how to start going about writing alt text?  Like the ultimate goal? )
+                </p>
+    
+                <p> <i> NOTE: </i> I am by no means an expert in writing alt text. This is something I am still learning about and it's also a skill that I am still striving to improve (through practice, listening and research). I am going to share some things I've learned through my research and time spent learning about alt text, but bear in mind that there are many opinions on how to write alt text! 
+    
+                This website provides my own perspective (as of this moment in time) but it's always good to seek out alternative points of view. I've created a page on this website with multiple perspectives and resources on how to write alt text and I encourage you to check them out! </p>
+    
+                <p>That being said, here are some things that I've learned / heard when it comes to writing alt text:
+                </p>
+    
+                <ul>
+                    <li style="background-color: yellow;"> insert things to consider when writing alt text
+                    </li>
+                    <li> 
+                    </li>
+                </ul>
+        
+    
+                
+                <h1>Examples</h1>
+    
+                <figure>
+            <a href="https://www.freepik.com/free-photo/australian-white-tree-frog-sitting-flower_17721898.htm#query=orange%20frog&position=0&from_view=keyword&track=ais&uuid=98768eff-119a-4064-bbae-ce52fbece170">
+                <img src="../pics/tree-frog.jpg" alt=" " style="width: 60%;">
+            </a>
+                <figcaption> Close-up shot of a small, green treefrog clinging to the center of an orange flower.
+                    <a href="https://www.freepik.com/free-photo/australian-white-tree-frog-sitting-flower_17721898.htm#query=orange%20frog&position=0&from_view=keyword&track=ais&uuid=98768eff-119a-4064-bbae-ce52fbece170"> (Image by kuritafsheen77</a> on Freepik)
+                </figcaption>
+                </figure>
+    
+                <figure>
+                    <img src="../pics/bitter-sneezeweed.jpg" alt=" " style="width: 60%;">
+                    <figcaption> Small, bright yellow wildflowers amongst a bed of green grass.
+                    </figcaption>
+                    </figure>
+    
+                <figure>
+                    <img src="../pics/dog-getting-kisses-by-cows.jpg" alt=" " style="width: 50%;">
+                    <figcaption> A dog wears an enormous smile while getting kisses and attention from a group of cows.
+                        </figcaption>
+                </figure>
+
+                        <a href="https://alt-text-as-poetry.net/blog/">Alt Text as Poetry Study Club (examples of alt text / image descriptions)
+                        </a>
+    
+    </div> <!-- right side -->
+    </div> <!-- main container -->   
+    </main>
+    
+    
+    <script src="../javascript/jquery-3.7.1.min.js"></script>
+    <script src="../javascript/scripts.js"></script>
+
+    
+    <script>
+
+        /* Set the width of the sidebar to 250px (show it) */
+
+        function openNav() {
+        document.getElementById("mySidepanel").style.width = "27vw";
+        }
+    
+        /* Set the width of the sidebar to 0 (hide it) */
+
+        function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+        } 
+
+    </script>
+    
+    
+</body>
+</html>

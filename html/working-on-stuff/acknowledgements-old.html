@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> template </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <html lang="en">
+            
+    <link rel="stylesheet" href="../css/main-new.css">
+    <link rel="icon" type="image/png" href="../pics/favicon.png">
+
+    <link rel="stylesheet" href="https://use.typekit.net/fgh5uly.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Lora?stroke=Serif">
+
+</head>
+    
+<body>
+
+<div class="top-menu" id="topMenu">
+    <button class="menu-button" onclick="toggleMenu()">&#9776; Site Menu</button>
+    <button class="close-button" onclick="toggleMenu()">&times;</button>
+        <ul class="menu-items">
+            <li>
+                <a href="../html/index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="../html/about.html">About</a>
+            </li>
+
+            <li>
+                <a href="../html/intro-to-alt-text.html">An introduction to alt text</a>
+            </li>
+
+            <li>
+                <a href="../html/practice.html">An opportunitity to practice</a>
+            </li>
+
+            <li>
+                <a href="../html/workshop.html">Workshop</a>
+            </li>
+
+            <li>
+                <a href="../html/resource-library.html">Resource Library</a>
+            </li>
+
+            <li>
+                <a href="../html/acknowledgements.html">Acknowledgements</a>
+            </li>
+
+        </ul>
+</div>
+
+        
+        
+                
+            <!-- <div class="font-selector">
+                <label for="font-selector" class="select-font">Select font-type:</label> <br>
+                
+                <select class="select-font-button" id="font-selector" autocomplete="off">
+
+                    <option selected="selected" value="sans-serif">sans serif</option>
+                    <option value="serif">serif</option>
+                    <option value="open-dyslexic">open dyslexic</option>
+                    <option value="comic-sans">comic sans</option>
+                
+                </select>
+            </div> font selector
+
+
+            <div class="color-change-container">
+
+                
+                <div class="color-change-3">
+                    <button onclick="changeColor('color-change-3')">Default colors</button>
+                </div>
+
+              
+                <div class="color-change-1">
+                    <button onclick="changeColor('color-change-1')">White background, <br>
+                    black text</button>
+                </div>
+
+             
+                <div class="color-change-2">
+                    <button onclick="changeColor('color-change-2')">Black background, <br>
+                    white text </button>
+                </div>
+
+             </div> 
+
+        
+        </div> sidepanel
+
+        <button class="openbtn" onclick="openNav()">&#9776; Site Menu</button> -->
+
+
+
+
+
+
+        <div class="main-container">
+
+            <div class="left-section" style="border-right: 2px solid;">
+            </div> <!-- left section-->
+
+            <div class="middle-section">
+                <div class="main-text-container">
+
+                <header>
+                    <h1 style="text-align: center;">Insert Page Title</h1>
+                </header>
+
+                <main>
+                
+
+                <p>(Main content goes here)</p>
+
+                <p> sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text</p>
+
+                </div> <!-- main text container-->
+
+                </main>
+
+      
+            </div> <!-- middle section -->
+
+            <div class="right-section" style="border-left: 2px solid;">
+            </div> <!-- right-section -->
+
+        </div>
+    
+          
+            
+
+    
+    
+    <script src="../javascript/jquery-3.7.1.min.js"></script>
+    <script src="../javascript/scripts.js"></script>
+
+    
+    <script>
+
+
+        function openNav() {
+        document.getElementById("mySidepanel").style.width = "27vw";
+        }
+    
+        /* Set the width of the sidebar to 0 (hide it) */
+
+        function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+        } 
+
+    </script>
+
+<script>
+    function toggleMenu() {
+        var topMenu = document.getElementById("topMenu");
+        topMenu.classList.toggle("open"); // Toggle the "open" class to show/hide the menu items
+        if (topMenu.classList.contains("open")) {
+            topMenu.style.height = "100vh"; // 
+        } else {
+            topMenu.style.height = "50px"; // Collapse the top menu to its initial height when closed
+        }
+    }
+</script>
+
+    
+    
+</body>
+</html>

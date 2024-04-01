@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+ 
+
+        .middle-section {
+            flex-grow: 1;
+            width: 70vw;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            text-align: left; /* Align text to the left */
+    
+        }
+
+        .left-section {
+            width: 15vw;
+            height: 100vh;
+            border-right: 2px solid;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .right-section {
+            width: 15vw;
+            height: 100vh;
+            border-left: 2px solid;
+            position: relative;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        .top-menu {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #f2f2f2;
+            overflow: hidden;
+            transition: width 0.3s ease;
+        }
+
+        .menu-button {
+            width: 15vw;
+            border: none;
+            background: none;
+            cursor: pointer;
+            padding: 10px;
+            text-align: left; /* Align text to left */
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            display: none; /* Hide close button by default */
+        }
+
+        .open .close-button {
+            display: block; /* Show close button when menu is opened */
+        }
+
+        .menu-items {
+            list-style: none;
+            padding: 20px;
+            display: none; /* Hide menu items by default */
+        }
+
+        .open .menu-items {
+            display: block; /* Show menu items when menu is opened */
+        }
+
+        .menu-items a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .customize {
+            display: none;
+            flex-direction: column;
+            align-items: center; /* Center align items */
+            padding: 20px;
+            border-bottom: 2px solid;
+        }
+
+        .open .customize {
+            display: flex;
+            height: fit-content; /* Adjust height to fit content */
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+
+    <div class="left-section">
+        <div class="top-menu" id="topMenu">
+            <button class="menu-button move-text" onclick="toggleMenu()"> &#9776; Menu </button>
+            <button class="close-button" onclick="toggleMenu()">&times;</button>
+            <ul class="menu-items">
+                <a href="../html/index.html"><li>Home</li></a>
+                <a href="../html/about.html"><li>About</li></a>
+                <a href="../html/intro-to-alt-text.html"><li>An introduction to alt text</li></a>
+                <a href="../html/practice.html"><li>An opportunity to practice</li></a>
+                <a href="../html/workshop.html"><li>Workshop</li></a>
+                <a href="../html/resource-library.html"><li>Resource Library</li></a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="middle-section">
+        <h1 style="text-align: center;">Insert Page Title</h1>
+        <p>(Main content goes here)</p>
+        <p> sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample</p>
+    </div>
+
+    <div class="right-section">
+        <div class="top-menu" id="customizeMenu">
+            <button class="menu-button" onclick="toggleCustomize()"> 
+                <img src="../pics/customize.png" alt="Customize page." style="width: 30px;"> <br> Customize page
+            </button>
+            <button class="close-button" onclick="toggleCustomize()">&times;</button>
+
+            <div class="customize">
+                <div class="font-selector">
+                    <label for="font-selector" class="select-font">Select font-type:</label> <br>
+                    <select class="select-font-button" id="font-selector" autocomplete="off">
+                        <option selected="selected" value="sans-serif">sans serif</option>
+                        <option value="serif">serif</option>
+                        <option value="open-dyslexic">open dyslexic</option>
+                        <option value="comic-sans">comic sans</option>
+                    </select>
+                </div> <!-- font selector -->
+
+                <div class="color-change-container">
+                    <div class="color-change-1">
+                        <button>White background, <br> black text</button>
+                    </div>
+                    <div class="color-change-2">
+                        <button>Black background, <br> white text</button>
+                    </div>
+                </div> <!-- color change container -->
+            </div> <!-- customize -->
+        </div> <!-- top menu -->
+    </div>
+
+</div>
+
+<script>
+    function toggleMenu() {
+        var topMenu = document.getElementById("topMenu");
+        topMenu.classList.toggle("open");
+        if (topMenu.classList.contains("open")) {
+            topMenu.style.height = "100vh";
+            topMenu.style.width = "65vw";
+        } else {
+            topMenu.style.height = "fit-content";
+            topMenu.style.width = "fit-content";
+        }
+    }
+
+    function toggleCustomize() {
+        var customizeMenu = document.getElementById("customizeMenu");
+        customizeMenu.classList.toggle("open");
+    }
+</script>
+
+</body>
+</html>

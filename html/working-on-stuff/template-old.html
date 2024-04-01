@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>template</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <html lang="en">
+            
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="icon" type="image/png" href="../pics/favicon.png">
+
+    <link rel="stylesheet" href="https://use.typekit.net/fgh5uly.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Lora?stroke=Serif">
+
+</head>
+    
+<body>
+
+<div class="main-container">
+
+<div class="left-section">
+
+    <div class="top-menu" id="topMenu">
+
+        <button class="menu-button move-text" onclick="toggleMenu()"> &#9776; Menu </button>
+
+        <button class="close-button" onclick="toggleMenu()">&times;</button>
+        
+    
+            <ul class="menu-items">
+               
+                    <a href="../html/index.html">
+                        <li>Home</li>   
+                    </a>
+                
+                    <a href="../html/about.html">
+                        <li>About</li>
+                    </a>
+                
+                    <a href="../html/intro-to-alt-text.html">
+                        <li>
+                        An introduction to alt text </li>
+                    </a>
+        
+
+                    <a href="../html/practice.html">
+                        <li>An opportunitity to practice</li>
+                    </a>
+
+            
+                    <a href="../html/workshop.html">
+                        <li>Workshop</li></a>
+                
+                
+                    <a href="../html/resource-library.html"><li>Resource Library</li></a>
+         
+    
+                    <!-- <a href="../html/acknowledgements.html"><li>Acknowledgements</li></a> -->
+                
+            </ul>
+
+        </div> <!--top menu-->
+</div> <!-- left section-->
+
+
+<div class="middle-section">
+
+        <h1 style="text-align: center;">Insert Page Title</h1>
+
+        <p>(Main content goes here)</p>
+
+        <p> sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text</p>
+
+        <p> sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text</p>
+
+        <p> sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text</p>
+
+</div><!-- middle section -->
+
+
+<div class="right-section">
+
+
+
+    <div class="customize-menu" id="customizeMenu">
+
+    <button class="menu-button-customize" onclick="openCustomizeMenu()">
+        <img src="../pics/customize.png" alt="Icon. Pencil in front of settings wheel.">Customize page </button>
+
+
+                <div class="customize">
+                
+          
+                        <div class="font-selector">
+                            <label for="font-selector" class="select-font">Select font-type:</label> <br>
+                            
+                            <select class="select-font-button" id="font-selector" autocomplete="off">
+        
+                                <option selected="selected" value="sans-serif">sans serif</option>
+        
+                                <option value="serif">serif</option>
+        
+                                <option value="open-dyslexic">open dyslexic</option>
+        
+                                <option value="comic-sans">comic sans</option>
+        
+                            </select>
+                        </div> 
+              
+            
+        
+                <div class="color-change-container">
+       
+           
+                        <div class="color-change-1">
+                            <button>White background, <br> black text</button>
+                        </div>
+    
+        
+        
+                        <div class="color-change-2">
+                            <button>Black background, <br> white text</button>
+                        </div>
+   
+        
+                </div> 
+        
+            </div> 
+
+            </ul>
+
+        </div> 
+
+</div> <!-- right section-->
+
+</div>
+
+
+<script src="../javascript/jquery-3.7.1.min.js"></script>
+<script src="../javascript/scripts.js"></script>
+
+    <!-- top menu -->
+    <script>
+        function toggleMenu() {
+            var topMenu = document.getElementById("topMenu");
+            topMenu.classList.toggle("open"); // Toggle the "open" class to show/hide the menu items
+            if (topMenu.classList.contains("open")) {
+                topMenu.style.height = "100vh"; 
+            } else {
+                topMenu.style.height = "fit-content";
+                topMenu.style.width = "fit-content"; // Collapse the top menu to its initial height when closed
+            }
+
+        }
+    </script>
+    
+    
+    <!-- customize menu -->
+    <script>
+        function toggleCustomize() {
+            var openCustomizeMenu = document.getElementById("customizeMenu");
+            topMenu.classList.toggle("openCustomizeMenu"); // Toggle the "open" class to show/hide the menu items
+            if (customizeMenu.classList.contains("open-customize")) {
+                customizeMenu.style.height = "50px"; // 
+            } else {
+                customizeMenu.style.height = "100vh"; // Collapse the top menu to its initial height when closed
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>
