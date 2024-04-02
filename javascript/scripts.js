@@ -28,6 +28,14 @@ $("#font-selector").change(function() {
       $(".top-menu").toggleClass("color-change-2");
       $("h1").toggleClass("color-change-2");
       $("a").toggleClass("color-change-2");
+      $(".customize-icon-dark-mode").toggleClass("color-change-2");
+      $(".customize-icon-light-mode").toggleClass("color-change-2");
+      $(".homepage-list").toggleClass("color-change-2");
+      $("label").toggleClass("color-change-2");
+      $(".light-mode-button").toggleClass("color-change-2");
+      $(".dark-mode-button").toggleClass("color-change-2");
+      $(".next-page-button").toggleClass("color-change-2");
+      
 
     }
   );

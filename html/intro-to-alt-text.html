@@ -411,7 +411,8 @@
     <div class="right-section">
         <div class="top-menu" id="customizeMenu">
             <button class="menu-button" onclick="toggleCustomize()" style="display: flex; justify-content: flex-start;"> 
-                <img src="../pics/customize.png" alt="Customize page."> Customize
+                <img class="customize-icon-light-mode" src="../pics/customize.png" alt="Customize page."> 
+                <img class="customize-icon-dark-mode" src="../pics/customize-2.png" alt="Customize page."> 
             </button>
             <button class="close-button" onclick="toggleCustomize()">&times;</button>
             <div class="customize">
@@ -426,10 +427,10 @@
                 </div>
                 <div class="color-change-container">
                     <div class="color-change-1">
-                        <button>White background, <br> black text</button>
+                        <button class="light-mode-button">White background, <br> black text</button>
                     </div>
                     <div class="color-change-2">
-                        <button>Black background, <br> white text</button>
+                        <button class="dark-mode-button">Black background, <br> white text</button>
                     </div>
                 </div>
             </div>
@@ -447,7 +448,7 @@
         topMenu.classList.toggle("open");
         if (topMenu.classList.contains("open")) {
             topMenu.style.height = "100vh";
-            topMenu.style.width = "65vw";
+            topMenu.style.width = "20vw";
         } else {
             topMenu.style.height = "fit-content";
             topMenu.style.width = "20vw";

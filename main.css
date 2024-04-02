@@ -149,6 +149,10 @@ body.serif {
     border-top: 2px solid;
 }
 
+.customize-icon-dark-mode {
+    display: none;
+}
+
 .customize.open {
     display: flex;
     flex-direction: column;
@@ -262,6 +266,7 @@ h2 {
     border-right: 20px solid;
     width: fit-content;
     padding-right: 15px;
+    border-radius: 3px;
     }
 
 .middle-section {
@@ -355,6 +360,11 @@ h2 {
     border: 1.5px solid;
   }
 
+  .select-font-button:hover {
+    background-color:black;
+    color:white;
+  }
+
 .top-menu {
     background-color: white;
     border-bottom: 2px solid;
@@ -365,10 +375,6 @@ h2 {
     transition: width 0.3s ease;
 }
 
-.top-menu.open {
-    border-right: 2px solid;
-    border-bottom: none;
-}
 
 
 
@@ -382,6 +388,7 @@ body.color-change-1 {
 .menu-button.color-change-1 {
     border: none;
 }
+
 
 /* COLOR CHANGE 2 (BLACK BACKGROUND WHITE TEXT)  */
 
@@ -397,4 +404,48 @@ h1.color-change-2 {
 a.color-change-2 {
     color: #addf9d;
 }
+
+.customize-icon-dark-mode.color-change-2 {
+    display: block;
+}
+
+.customize-icon-light-mode.color-change-2 {
+    display: none;
+}
+
+
+.top-menu.color-change-2 {
+    background-color: black;
+    color: white;
+}
+
+label.color-change-2 {
+    color: white;
+}
+
+.light-mode-button.color-change-2 {
+    background-color: white;
+    color: black;
+}
+
+.light-mode-button:hover.color-change-2{
+    border: 2px solid black;
+    outline: 1px solid white;
+    box-shadow: 0 0 30px white;
+}
+
+.dark-mode-button.color-change-2:hover {
+    border: 2px solid black;
+    outline: 1px solid white;
+    box-shadow: 0 0 30px white;
+}
+
+.next-page-button:hover.color-change-2 {
+    background-color: black;
+    border-right: 20px solid;
+    border-left: 20px solid;
+
+}
+
+
 

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <html lang="en">
             
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/homepage.css">
     <link rel="icon" type="image/png" href="pics/favicon.png">
 
     <link rel="stylesheet" href="https://use.typekit.net/fgh5uly.css">
@@ -18,7 +18,7 @@
 
 <div class="main-container">
 
-    <div class="left-section">
+    <!-- <div class="left-section">
         <div class="top-menu" id="topMenu">
             <button class="menu-button move-text" onclick="toggleMenu()"> &#9776; Menu </button>
             <button class="close-button" onclick="toggleMenu()">&times;</button>
@@ -38,15 +38,12 @@
 
             </ul>
         </div>
-    </div>
+    </div> -->
+<!-- 
+    <div class="top-bar-homepage">
+        <ul style="list-style: none;">
 
-    <div class="middle-section">
-        <div class="main-text-container">
-        <h1 style="text-align: center;">1,000 words</h1>
-
-        <ul>
-
-            <li> <a href="html/about.html">About</a> </li>
+            <li style="border: 2px solid;"> <a href="html/about.html">About</a> </li>
 
             <li> <a href="html/intro-to-alt-text.html">An introduction to alt text</a> </li>
 
@@ -56,6 +53,45 @@
 
             <li> <a href="html/resource-library.html">Resource Library</a> </li>
         </ul>
+    
+    </div> -->
+
+    <div class="middle-section">
+        <div class="main-text-container">
+        <h1 style="text-align: center;">A picture is worth 1,000 words</h1>
+
+        <ul class="homepage-list" style="list-style: none;">
+
+            <div class="homepage-list-li">
+
+                <li> <a href="html/about.html">About</a> </li>
+
+            </div>
+
+            <div class="homepage-list-li">
+
+                <li> <a href="html/intro-to-alt-text.html">An introduction to alt text</a> </li>
+
+            </div>
+
+            <div class="homepage-list-li">
+
+                <li> <a href="html/workshop.html">Workshop</a> </li>
+
+            </div>
+
+            <div class="homepage-list-li">
+
+                <li> <a href="html/practice.html">Practice</a> </li>
+
+            </div>
+
+            <div class="homepage-list-li">
+
+                <li> <a href="html/resource-library.html">Resource Library</a> </li>
+
+            </div>
+        </ul>
        
     </div>
 </div>
@@ -63,7 +99,8 @@
     <div class="right-section">
         <div class="top-menu" id="customizeMenu">
             <button class="menu-button" onclick="toggleCustomize()" style="display: flex; justify-content: flex-start;"> 
-                <img src="pics/customize.png" alt="Customize page."> Customize
+                <img class="customize-icon-light-mode" src="pics/customize.png" alt="Customize page."> 
+                <img class="customize-icon-dark-mode" src="pics/customize-2.png" alt="Customize page."> 
             </button>
             <button class="close-button" onclick="toggleCustomize()">&times;</button>
             <div class="customize">
@@ -78,10 +115,10 @@
                 </div>
                 <div class="color-change-container">
                     <div class="color-change-1">
-                        <button>White background, <br> black text</button>
+                        <button class="light-mode-button">White background, <br> black text</button>
                     </div>
                     <div class="color-change-2">
-                        <button>Black background, <br> white text</button>
+                        <button class="dark-mode-button">Black background, <br> white text</button>
                     </div>
                 </div>
             </div>
@@ -90,8 +127,8 @@
 
 </div>
 
-<script src="../javascript/jquery-3.7.1.min.js"></script>
-<script src="../javascript/scripts.js"></script>
+<script src="javascript/jquery-3.7.1.min.js"></script>
+<script src="javascript/scripts.js"></script>
 
 <script>
     function toggleMenu() {
@@ -99,7 +136,7 @@
         topMenu.classList.toggle("open");
         if (topMenu.classList.contains("open")) {
             topMenu.style.height = "100vh";
-            topMenu.style.width = "65vw";
+            topMenu.style.width = "20vw";
         } else {
             topMenu.style.height = "fit-content";
             topMenu.style.width = "20vw";
