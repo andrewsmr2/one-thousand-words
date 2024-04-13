@@ -4,27 +4,28 @@
 
 @font-face {
     font-family: 'open dyslexic';
-    src: url('fonts/opendyslexic-regular-webfont.woff2') format('woff2'),
-        url('fonts/opendyslexic-regular-webfont.woff') format('woff');
+    src: url('../fonts/opendyslexic-regular-webfont.woff2') format('woff2'),
+        url('../fonts/opendyslexic-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     }
       
 @font-face {
     font-family: 'comic sans';
-    src: url('fonts/comicsans-webfont.woff2') format('woff2'),
-        url('fonts/comicsans-webfont.woff') format('woff');
+    src: url('../fonts/comicsans-webfont.woff2') format('woff2'),
+        url('../fonts/comicsans-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     }
       
 @font-face {
     font-family: 'Book Antiqua';
-    src: url('fonts/book-antiqua-webfont.woff2') format('woff2'),
-        url('fonts/book-antiqua-webfont.woff') format('woff');
+    src: url('../fonts/book-antiqua-webfont.woff2') format('woff2'),
+        url('../fonts/book-antiqua-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     }
+
 
 .back {
     background-color: white;
@@ -149,8 +150,8 @@ body.serif {
     display: none;
     flex-direction: column;
     align-items: center; /* Center align items */
-    border-bottom: 2px solid;
     border-top: 2px solid;
+    border-right: 2px solid;
 }
 
 .customize.open {
@@ -162,6 +163,7 @@ body.serif {
 }
 
 
+
 .font-selector {
     padding: 20px 0;
     display: flex;
@@ -170,13 +172,13 @@ body.serif {
   }
 
 .homepage-list {
-    width: 79.75vw;
-    height: 70px;
-    border-top: 2px solid;
+    width: 100vw;
+    height: 60px;
     border-bottom: 2px solid;
     background-color: white;
     position: fixed;
-    bottom: 0;
+   top: 0;
+   left: 0;
     margin: 0;
     margin-bottom: 50px;
     padding: 10px;
@@ -191,32 +193,42 @@ body.serif {
 
 
 h1 {
-    background-color: white;
+    position: fixed;
+    bottom: 100px;
+    background-color:white;
+    color:#ab5b0b;
     text-align: center;
     padding-top: 3px;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    width: 100%;
+border: 2px solid;
+    width: 20vw;
     margin: 0;
+    padding: 10px;
 }
 
 h2 {
     text-align: center;
     border-top: 2px solid;
     border-bottom: 2px solid;
-    width: 100%;
+    width: 20vw;
     padding: 10px;
+
+    position: fixed;
+    bottom: 0;
+    margin: 0;
     
 }
 
 
-.left-section {
+/* .left-section {
     width: 20vw;
     height: 100vh;
+
+    border-right: 2px solid;
+
  
 
     z-index: 1;
-}
+} */
 
 li:hover {
 border-left: 20px solid;
@@ -237,16 +249,18 @@ padding-right: 10px;
 .menu-button {
     width: 20vw;
     background-color: transparent;
-    height: 50px;
+    height: 60px;
     border: none;
   
     font-size: 1.5rem;
-    padding: 10px;
+    /* padding: 10px; */
 
     cursor: pointer;
     padding: 10px;
     text-align: left; /* Align text to left */
 }
+
+
 
 .menu-button:hover {
     font-size: 1.6rem;
@@ -284,13 +298,12 @@ padding-right: 10px;
     }
 
 .middle-section {
-    width: 80vw;
+    width: 100vw;
     height: 100vh;
 
     padding-top: 50px;
-
     border-left: 2px solid;
-    border-right: 2px solid;
+
    
 
     display: flex;
@@ -330,6 +343,19 @@ padding-right: 10px;
     display: block; /* Show menu items when menu is opened */
 }
 
+.photo-container {
+    height: 100vh;
+    width: 80vw;
+    z-index: -1;
+    position: absolute;
+    left: 20vw;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    overflow-y: scroll;
+}
+
 .right-section {
     width: 20vw;
     height: 100vh;
@@ -338,6 +364,7 @@ padding-right: 10px;
     top: 0;
     right: 0;
     z-index: 1;
+    border-left: 2px solid;
 }
 
 .select-font {
@@ -399,6 +426,7 @@ body.color-change-2 {
 
 h1.color-change-2 {
     background-color: black;
+    color: white;
 }
 
 a.color-change-2 {

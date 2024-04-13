@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Top Navigation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .top-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        .left-menu {
+            border-right: 2px solid;
+        }
+
+        .menu-items {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+            flex-direction: column;
+            background-color: lightgray;
+            padding: 10px;
+            position: absolute;
+            width: 200px;
+            z-index: 1;
+        }
+
+        .menu-items li {
+            padding: 10px;
+        }
+
+        .menu-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .menu-button span {
+            display: inline-block;
+        }
+
+        .menu-button:focus {
+            outline: none;
+        }
+
+        .customize {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 2;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .menu-button span {
+                display: none; /* Hide text on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-menu">
+
+        <div class="left-menu">
+            <button class="menu-button move-text" onclick="toggleMenu()"> &#9776;<span>Main Menu</span> </button>
+            <ul class="menu-items" id="topMenu">
+
+                <a href="../index.html"> <li> Home </li> </a> 
+
+                <a href="about.html"> <li> About </li> </a> 
+
+                <a href="intro-to-alt-text.html"> <li> An introduction to alt text </li> </a> 
+
+                <a href="workshop.html"> <li> Workshop </li> </a> 
+
+                <a href="practice.html"> <li> Practice </li> </a> 
+
+                <a href="resource-library.html"> <li> Resource Library </li> </a>
+
+            </ul>
+        </div> <!-- left menu -->
+
+        <div class="right-menu">
+
+            <button class="menu-button" onclick="toggleCustomize()">
+                <img class="customize-icon-light-mode" src="../pics/customize.png" alt="Customize page." style="width: 40px;"> 
+
+                <span class="customize-btn-text">Customize Page</span>
+            </button>
+
+            <ul class="menu-items" id="customizeItems">
+
+                <li>Select font-type:</li>
+                <li><select class="select-font-button" id="font-selector" autocomplete="off">
+
+                    <option selected="selected" value="sans-serif">sans serif</option>
+                    <option value="serif">serif</option>
+                    <option value="open-dyslexic">open dyslexic</option>
+                    <option value="comic-sans">comic sans</option>
+
+                </select>
+                </li>
+
+                <li><button class="light-mode-button">White background, black text</button></li>
+                <li><button class="dark-mode-button">Black background, white text</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var topMenu = document.getElementById("topMenu");
+            topMenu.style.display = topMenu.style.display !== "block" ? "block" : "none";
+        }
+
+        function toggleCustomize() {
+            var customizeItems = document.getElementById("customizeItems");
+            customizeItems.style.display = customizeItems.style.display !== "block" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>

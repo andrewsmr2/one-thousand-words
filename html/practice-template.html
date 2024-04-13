@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center everything horizontally */
+        }
+        #container {
+            position: relative;
+            width: 80vw;
+            max-width: 400px; /* Limit maximum width */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align items to the start of the container */
+        }
+        #photo-container {
+            width: 100%;
+            margin-bottom: 10px; /* Add space between photo and input field */
+        }
+        #photo {
+            width: 100%; /* Adjust photo width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+        #input-field {
+            width: 100%; /* Occupy full width */
+            height: 40px; /* Adjust height of text box */
+            margin-bottom: 10px; /* Add space between input field and submit button */
+        }
+        #submit-button {
+            width: 80px; /* Adjust width of submit button */
+            height: 40px; /* Adjust height of submit button */
+        }
+        .submission {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px; /* Add space between submissions */
+        }
+        .delete-button {
+            margin-left: 10px; /* Add space between delete button and submission text */
+            padding: 5px; /* Add padding to delete button */
+            cursor: pointer;
+        }
+        #output {
+            width: 100%; /* Occupy full width */
+            max-height: 300px; /* Limit maximum height */
+            overflow-y: auto; /* Add vertical scrollbar if content exceeds height */
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+        }
+        #char-counter-container {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+        }
+        #char-label {
+            font-size: 14px;
+            color: #666;
+            margin-right: 5px;
+        }
+        #char-counter {
+            font-size: 14px;
+            color: #333;
+            border: 1px solid #ccc; /* Add border around character counter */
+            padding: 5px; /* Add padding around character counter */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="photo-container">
+            <!-- Insert your photo here -->
+            <img src="../pics/lacey-white-flowers-sit-in-outstretched-water.jpg" style="max-width: 400px;">
+        </div>
+        <input type="text" id="input-field" placeholder="Type something here...">
+        <button id="submit-button">Submit</button>
+        <div id="output"></div>
+    </div>
+    <div id="char-counter-container">
+        <span id="char-label">Character Counter:</span>
+        <span id="char-counter">0</span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputField = document.getElementById('input-field');
+            const submitButton = document.getElementById('submit-button');
+            const output = document.getElementById('output');
+            const charCounter = document.getElementById('char-counter');
+
+            function createSubmission(text) {
+                const submission = document.createElement('div');
+                submission.classList.add('submission');
+
+                const submissionText = document.createElement('p');
+                submissionText.textContent = text;
+
+                const deleteButton = document.createElement('span');
+                deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>'; // Add trash can icon
+                deleteButton.classList.add('delete-button');
+                deleteButton.addEventListener('click', function() {
+                    output.removeChild(submission);
+                });
+
+                submission.appendChild(submissionText);
+                submission.appendChild(deleteButton);
+                output.insertBefore(submission, output.firstChild);
+            }
+
+            inputField.addEventListener('input', function() {
+                charCounter.textContent = inputField.value.length;
+            });
+
+            submitButton.addEventListener('click', function() {
+                const text = inputField.value.trim();
+                if (text !== '') {
+                    createSubmission(text);
+                    inputField.value = '';
+                    charCounter.textContent = '0';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

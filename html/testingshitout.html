@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>1,000 Words</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="icon" type="image/png" href="pics/favicon.png">
+    <link rel="stylesheet" href="https://use.typekit.net/fgh5uly.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Lora?stroke=Serif">
+    <style>
+        /* Add styles for homepage list */
+        .homepage-list {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border-bottom: 2px solid #333; /* Adjusted border thickness */
+        }
+
+        /* Add styles for homepage list items */
+        .homepage-list li {
+            border-right: 2px solid #333; /* Adjusted border thickness */
+            border-bottom: none; /* Remove bottom border */
+            flex-grow: 1;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Remove right border for last item */
+        .homepage-list li:last-child {
+            border-right: none;
+        }
+
+        /* Add hover effect */
+        .homepage-list li:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Add styles for customize menu */
+        .customize-menu {
+            position: fixed;
+            bottom: calc(20px + 40px); /* Adjusted to accommodate the customize button height */
+            right: 20px;
+            display: none;
+            background-color: #fff;
+            border: 2px solid #333;
+            border-radius: 5px;
+            padding: 10px;
+            z-index: 1000; /* Set a higher z-index value */
+        }
+
+        /* Add styles for customize menu button */
+        .customize-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 999; /* Set a lower z-index value */
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="middle-section">
+            <div class="main-text-container">
+                <!-- Your main content here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Homepage List -->
+    <ul class="homepage-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="html/about.html">About</a></li>
+        <li><a href="html/intro-to-alt-text.html">An introduction to alt text</a></li>
+        <li><a href="html/workshop.html">Workshop</a></li>
+        <li><a href="html/practice.html">Practice</a></li>
+        <li><a href="html/resource-library.html">Resource Library</a></li>
+    </ul>
+
+    <!-- Customize Menu Button -->
+    <div class="customize-button" onclick="toggleCustomize()">Customize Page</div>
+
+    <!-- Customize Menu -->
+    <div class="customize-menu" id="customizeMenu">
+        <button class="close-button" onclick="toggleCustomize()">&times;</button>
+        <div class="font-selector">
+            <label for="font-selector" class="select-font">Select font-type:</label> <br>
+            <select class="select-font-button" id="font-selector" autocomplete="off">
+                <option selected="selected" value="sans-serif">sans serif</option>
+                <option value="serif">serif</option>
+                <option value="open-dyslexic">open dyslexic</option>
+                <option value="comic-sans">comic sans</option>
+            </select>
+        </div>
+        <div class="color-change-container">
+            <div class="color-change-1">
+                <button class="light-mode-button">White background, <br> black text</button>
+            </div>
+            <div class="color-change-2">
+                <button class="dark-mode-button">Black background, <br> white text</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleCustomize() {
+            var customizeMenu = document.getElementById("customizeMenu");
+            if (customizeMenu.style.display === "block") {
+                customizeMenu.style.display = "none";
+            } else {
+                customizeMenu.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
