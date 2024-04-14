@@ -35,6 +35,7 @@ $("#font-selector").change(function() {
       $(".light-mode-button").toggleClass("color-change-2");
       $(".dark-mode-button").toggleClass("color-change-2");
       $(".next-page-button").toggleClass("color-change-2");
+      $(".back").toggleClass("color-change-2");
       
 
     }

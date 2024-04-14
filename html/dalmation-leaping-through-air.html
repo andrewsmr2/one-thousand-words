@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <html lang="en">
+
+    <title>Practice</title>
+
+
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="../pics/favicon.png">
+
+
+    <link rel="stylesheet" href="https://use.typekit.net/fgh5uly.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Lora?stroke=Serif">
+
+    
+</head>
+<body>
+
+    <div class="main-container">
+
+        <div class="left-section">
+            <div class="top-menu" id="topMenu">
+                <button class="menu-button move-text" onclick="toggleMenu()"> &#9776; Menu </button>
+                <button class="close-button" onclick="toggleMenu()">&times;</button>
+                <ul class="menu-items">
+    
+                    <a href="../index.html"> <li> Home </li> </a>
+    
+                    <a href="about.html"> <li>About</li> </a> 
+    
+                    <a href="intro-to-alt-text.html"> <li>An introduction to alt text</li> </a> 
+    
+                    <!-- <a href="workshop.html"> <li> Workshop </li> </a> -->
+    
+                    <a href="practice.html"> <li>Practice</li> </a> 
+    
+                    <a href="resource-library.html"> <li>Resource Library</li> </a> 
+    
+                </ul>
+            </div>
+    
+            <img src="../pics/scans/practice-photo-left.jpg" alt="" style="width: 20vw; height: 100%;">
+        </div>
+
+    <div class="middle-section" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding-bottom: 20px;">
+
+        <button class="back">
+            <a href="../html/practice.html">Back to main Practice page</a>
+        </button>
+
+    <p class="instructions">If you were writing alt text or an image description of the photo below, what would you write? It's okay if this feels clumsy at first, that's normal!
+    </p>
+
+    <p><i><b> Some thoughts you can start off with:</b></i>
+        <ul style="margin-top: 5px;">
+            <li>What's in the photo? List what you see.
+            </li>
+
+            <li>What are some words that come to mind when you see this photo?
+            </li>
+
+            <li>How would you describe this photo to a friend? A stranger?
+            </li>
+
+            <li style="background-color: yellow;">I need to make sure I'm not fully copying alt text as poetry here
+            </li>
+        </ul>
+    </p> 
+
+    <div id="container">
+        <div id="photo-container">
+            <!-- Insert your photo here -->
+            <img src="../pics/scans/dalmation-leaping-through-air.png" alt="Dalmation soars through the air, mid-leap." style="max-width: 650px;">
+        </div>
+
+        <div class="input-char-counter-container">
+
+        <input type="text" id="input-field" placeholder="Type your alt text / image description here." style="padding-left: 10px;">
+
+        <div id="char-counter-container">
+            <span id="char-label" style="position: relative; top: 2px;">Character Counter:</span>
+            <span id="char-counter">0</span>
+        </div>
+
+    </div>
+
+        <button id="submit-button">Submit</button>
+        <div id="output"></div>
+    </div>
+
+    <!-- <div class="next-page">
+        
+         <button class="next-page-button">
+             <a href="dalmation-leaping-through-air.html">Next photo</a>
+         </button>
+     </div> -->
+
+
+</div> <!-- middle section -->
+
+<div class="right-section">
+    <div class="top-menu" id="customizeMenu">
+        <button class="menu-button" onclick="toggleCustomize()" style="display: flex; justify-content: flex-start;"> 
+            <img class="customize-icon-light-mode" src="../pics/customize.png" alt="Customize page."> 
+            <img class="customize-icon-dark-mode" src="../pics/customize-2.png" alt="Customize page."> 
+        </button>
+        <button class="close-button" onclick="toggleCustomize()">&times;</button>
+        <div class="customize">
+            <div class="font-selector">
+                <label for="font-selector" class="select-font">Select font-type:</label> <br>
+                <select class="select-font-button" id="font-selector" autocomplete="off">
+                    <option selected="selected" value="sans-serif">sans serif</option>
+                    <option value="serif">serif</option>
+                    <option value="open-dyslexic">open dyslexic</option>
+                    <option value="comic-sans">comic sans</option>
+                </select>
+            </div>
+            <div class="color-change-container">
+                <div class="color-change-1">
+                    <button class="light-mode-button">White background, <br> black text</button>
+                </div>
+                <div class="color-change-2">
+                    <button class="dark-mode-button">Black background, <br> white text</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img src="../pics/scans/practice-photo-right.jpg" alt="" style="width: 20vw; height: 100%;">
+</div>
+
+</div>
+
+<script src="../javascript/jquery-3.7.1.min.js"></script>
+<script src="../javascript/scripts.js"></script>
+
+<script>
+    function toggleMenu() {
+        var topMenu = document.getElementById("topMenu");
+        topMenu.classList.toggle("open");
+        if (topMenu.classList.contains("open")) {
+            topMenu.style.height = "100vh";
+            topMenu.style.width = "20vw";
+        } else {
+            topMenu.style.height = "fit-content";
+            topMenu.style.width = "20vw";
+        }
+    }
+
+    function toggleCustomize() {
+        var customizeMenu = document.getElementById("customizeMenu");
+        customizeMenu.classList.toggle("open");
+    }
+</script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputField = document.getElementById('input-field');
+            const submitButton = document.getElementById('submit-button');
+            const output = document.getElementById('output');
+            const charCounter = document.getElementById('char-counter');
+
+            function createSubmission(text) {
+                const submission = document.createElement('div');
+                submission.classList.add('submission');
+
+                const submissionText = document.createElement('p');
+                submissionText.textContent = text;
+
+                const deleteButton = document.createElement('span');
+                deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>'; // Add trash can icon
+                deleteButton.classList.add('delete-button');
+                deleteButton.addEventListener('click', function() {
+                    output.removeChild(submission);
+                });
+
+                submission.appendChild(submissionText);
+                submission.appendChild(deleteButton);
+                output.insertBefore(submission, output.firstChild);
+            }
+
+            inputField.addEventListener('input', function() {
+                charCounter.textContent = inputField.value.length;
+            });
+
+            submitButton.addEventListener('click', function() {
+                const text = inputField.value.trim();
+                if (text !== '') {
+                    createSubmission(text);
+                    inputField.value = '';
+                    charCounter.textContent = '0';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -90,6 +90,39 @@
         <span id="char-counter">0</span>
     </div>
 
+    <div class="right-section">
+        <div class="top-menu" id="customizeMenu">
+            <button class="menu-button" onclick="toggleCustomize()" style="display: flex; justify-content: flex-start;"> 
+                <img class="customize-icon-light-mode" src="../pics/customize.png" alt="Customize page."> 
+                <img class="customize-icon-dark-mode" src="../pics/customize-2.png" alt="Customize page."> 
+            </button>
+            <button class="close-button" onclick="toggleCustomize()">&times;</button>
+            <div class="customize">
+                <div class="font-selector">
+                    <label for="font-selector" class="select-font">Select font-type:</label> <br>
+                    <select class="select-font-button" id="font-selector" autocomplete="off">
+                        <option selected="selected" value="sans-serif">sans serif</option>
+                        <option value="serif">serif</option>
+                        <option value="open-dyslexic">open dyslexic</option>
+                        <option value="comic-sans">comic sans</option>
+                    </select>
+                </div>
+                <div class="color-change-container">
+                    <div class="color-change-1">
+                        <button class="light-mode-button">White background, <br> black text</button>
+                    </div>
+                    <div class="color-change-2">
+                        <button class="dark-mode-button">Black background, <br> white text</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img src="../pics/scans/practice-right.jpg" alt="" style="width: 20vw; height: 100%;">
+    </div>
+
+</div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const inputField = document.getElementById('input-field');

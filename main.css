@@ -26,24 +26,24 @@
     font-style: normal;
     }
 
+
 .back {
+    width: fit-content;
+
     background-color: white;
     height: 50px;
-    border: none;
-    border-right: 2px solid;
-    border-left: 2px solid;
-
-
-    position: absolute;
-    left: 20vw;
-    top: 0;
+    border: 2px solid;
+    border-radius: 3px; 
   
     font-size: 1.5rem;
     padding: 10px;
 
+    position: relative;
+    top: -15px;
+
     cursor: pointer;
-    padding: 10px;
-    text-align: left; /* Align text to left */
+
+
 }
 
 .back:hover {
@@ -168,6 +168,7 @@ body.serif {
    padding: 10px;
 }
 
+
 .font-selector {
     padding: 20px 0;
     display: flex;
@@ -199,6 +200,11 @@ h2 {
 
 .image-center {
     text-align: center;
+    margin: 0 auto;
+}
+
+.instructions {
+    max-width: 800px;
 }
 
 
@@ -356,6 +362,35 @@ p {
     margin-bottom: 10px;
 }
 
+/* .practice-photo {
+    cursor: pointer;
+    width: fit-content;
+} */
+
+.practice-photo:hover {
+    transform: rotate(3deg);
+    cursor: pointer;
+    /* border: 2px solid; */
+    
+}
+
+.practice-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.practice-photo-container a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: fit-content;
+}
+
 .right-section {
     width: 20vw;
     height: 100vh;
@@ -364,7 +399,7 @@ p {
     top: 0;
     right: 0;
     z-index: 1;
-    border-left: 2px solid;
+    /* border-left: 2px solid; */
 }
 
 .select-font {
@@ -410,6 +445,16 @@ body.color-change-1 {
 
 
 /* COLOR CHANGE 2 (BLACK BACKGROUND WHITE TEXT)  */
+
+.back.color-change-2 {
+    background-color: black;
+}
+
+.back.color-change-2:hover {
+    background-color: black;
+    border-right: 20px solid;
+    border-left: 20px solid;
+}
 
 body.color-change-2 {
     background-color: black;
@@ -467,4 +512,90 @@ label.color-change-2 {
 }
 
 
+/* ----------------- PRACTICE PAGES -----------------  */
 
+
+
+#container {
+    position: relative;
+    width: 80vw;
+    max-width: 400px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* margin-top: 10px; */
+    margin-bottom: 25px; 
+}
+#photo {
+    width: 100%; /* Adjust photo width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#input-field {
+    width: 100%; 
+    height: 85px; 
+    margin-bottom: 10px; 
+    text-wrap: wrap;
+}
+#submit-button {
+    width: 80px; /* Adjust width of submit button */
+    height: 40px; /* Adjust height of submit button */
+}
+.submission {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Add space between submissions */
+}
+.delete-button {
+    margin-left: 10px; /* Add space between delete button and submission text */
+    padding: 5px; /* Add padding to delete button */
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    transform: rotate(15deg);
+}
+
+#output {
+    width: 750px;
+    
+    overflow-y: auto; /* Add vertical scrollbar if content exceeds height */
+    /* padding: 10px; */
+}
+#char-counter-container {
+    padding: 5px 3px 1px 10px;
+    border: 1px solid;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+#char-label {
+    font-size: 14px;
+
+    margin-right: 5px;
+}
+#char-counter {
+    font-size: 14px;
+    position: relative;
+    top: 2px;
+
+
+}
+
+.input-char-counter-container {
+    display: flex;
+    flex-direction: row;
+    width: 750px;
+    height: 100px;
+    gap: 10px;
+}
