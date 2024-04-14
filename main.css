@@ -291,7 +291,7 @@ h2 {
   
 
     border-left: 2px solid;
-    border-right: 2px solid;
+    /* border-right: 2px solid; */
    
 
     display: flex;
@@ -398,8 +398,7 @@ p {
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 1;
-    /* border-left: 2px solid; */
+    /* z-index: 1; */
 }
 
 .select-font {
