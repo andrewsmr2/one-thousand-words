@@ -18,6 +18,12 @@
 
 <div class="main-container">
 
+    <div class="mobile-tablet">
+        <p style="padding: 20px;">Please view <br> <i>https://andrewsmr2.github.io/one-thousand-words/ </i> <br> on a laptop / desktop computer. <br>
+        Thanks!
+        </p>
+    </div>
+
     <div class="left-section">
         <div class="top-menu" id="topMenu">
             <button class="menu-button move-text" onclick="toggleMenu()"> &#9776; Menu </button>
@@ -264,7 +270,7 @@
                         <li>Include a description of the image in the image caption or nearby text and just use something very short and basic for your alt text.
                         </li>
 
-                        <li>If it is a complex image like a graph, you can also include a nearby text link to a document where you’re able to fully explain all the information in the image <span style="background-color: yellow">(show example). </span>
+                        <li>If it is a complex image like a graph, you can also include a nearby text link to a document (for example: a Google doc) where you’re able to fully explain all the information in the image.
                         </li>
                     </ul>
 
@@ -291,12 +297,23 @@
                     <li>If there is an image in your website / document that doesn’t convey any essential information and is mostly just there to improve the look of your website / document, you can just leave the alt text blank.
                     </li>
 
-                    <li><span style="background-color: yellow;"> (show example of decorative image- like a line divider) </span>
+                    <li>
+                        One example of a decorative image that you would not need to write alt text for is a decorative line divider, such as the one I've shown below. <br><br>
+
+                        <img src="../pics/line-divider.png" alt="Decorative line divider." style="width:100%; position: relative; bottom: 15px;">
+
+                        Another example would be the images that I've used on the left and right side of this website. I chose to include these images for aesthetic / decorative purposes - they don't convey any important information. So I've left the alt text blank for those images.
                     </li>
 
                     <ul>
-                        <li>There are ways to mark images as decorative in certain programs, such as ____ <span style="background-color: yellow;">(need to look this up and provide link to tutorial)</span>
+                        <li>Just as some programs / platforms offer you the option to write alt text without having to touch any code, there are programs that allow you mark images as decorative, as well. <br><br>
+
+                        For example, the image below is a screenshot from a Microsoft Word document. If an image is purely decorative, you can check the box next to the words "Mark as decorative" in order to tell a screen reader that it can skip over that specific image.
                         </li>
+
+                        <div class="image-center">
+                        <img src="../pics/microsoft-word-mark-as-decorative.png" alt="Screenshot of the alt text option box in Microsoft Word. A red box highlights the option to mark an image as decorative." style="width: 40%; padding-top: 25px; padding-bottom: 20px; position: relative; right: 35px;">
+                        </div>
                     </ul>
 
                     <li>When coding, it’s important to still write an “alt” attribute even if the image is decorative (you can just write:  alt=”” ). If don't include the alt attribute at all, the screen reader might read the image file name (which might be something like “IMG_8660.JPG”). If you write the alt attribute but leave it blank, the screen reader will know to ignore / skip over the image.
@@ -334,29 +351,67 @@
         <p style="position: relative; left: -13px;">From what I’ve learned so far, these seem to be the main differences:</p>
 
 
-        <p> &cir; <b>Location:</b> Alt text and image descriptions are “stored” in different places. Alt text is usually attached to an image, while image descriptions might be in the caption or nearby text.  </p> 
+        <ul>
+        
+        <li><b>Location:</b> 
+            <ul>
+            
+            <li style="padding-bottom: 35px;">Alt text and image descriptions are “stored” in different places. Alt text is usually attached to an image, while image descriptions might be in the caption or nearby text.  </li>
+            </ul>
+        </li>
 
-                <p> &cir; <b>Visibility:</b> Alt text is usually only seen by screen readers. For example the image below is an example of an image with just alt text.</p> 
+                <li><b>Visibility:</b> 
 
-                <img src="../pics/drooping-stars-of-bethlehem.jpg" alt="Medium sized, white, star-shaped flowers on a green, grassy hill under a blue sky." style="width: 40%; padding-top: 35px; padding-bottom: 25px;">
+                    <ul>
+                    
+                    <li>Alt text is usually only seen by screen readers. For example the image below is an example of an image with just alt text.
+
+                <div class="image-center">
+
+                <img src="../pics/drooping-stars-of-bethlehem.jpg" alt="Medium sized, white, star-shaped flowers on a green, grassy hill under a blue sky." style="width: 40%; padding-top: 45px; padding-bottom: 10px; position: relative; right: 40px;">
+
+                </div>
                     
                 <p style="padding-bottom: 20px;"> Now this is an example of an image with an image description:</p> 
 
-                <img class="image-center" src="../pics/image-description-example.png" alt="Screenshot of a twitter post displaying an image description above a photo. The post from Dogs Trust reads 'When someone says they're not a dog person. Image description:
-                White and brown Lurcher close up looking directly at the camera with his eyes slightly squinting giving a look of judgement. His ears are floppy and he has a black snoot.White and brown Lurcher close up looking directly at the camera with his eyes slightly squinting giving a look of judgement. His ears are floppy and he has a black snoot.' " style="width: 60%; padding-top: 20px; padding-bottom: 30px;">
+                <div class="image-center">
 
-                <p> This is a 
+                <img class="image-center" src="../pics/image-description-example.png" alt="Screenshot of a twitter post displaying an image description above a photo. The post from Dogs Trust reads 'When someone says they're not a dog person. Image description:
+                White and brown Lurcher close up looking directly at the camera with his eyes slightly squinting giving a look of judgement. His ears are floppy and he has a black snoot.White and brown Lurcher close up looking directly at the camera with his eyes slightly squinting giving a look of judgement. His ears are floppy and he has a black snoot.' " style="width: 60%; padding-top: 20px; padding-bottom: 20px; position: relative; right: 40px;">
+
+                </div>
+
+                <p style="padding-bottom: 20px;"> This is a 
                 
                 <a href="https://twitter.com/DogsTrust/status/1646528737259978755?s=20" target="_blank" rel="noreferrer noopener"> post on Twitter</a> 
                 
-                and the author has included the image description in the caption of the post. So viewers with the ability to see will be able to see the image description, due to the location in which it's being put (it's not hiding in the back-end stuff). </p> </li>
+                and the author has included the image description in the caption of the post. So viewers with the ability to see will be able to see the image description, due to the location in which it's being put (it's not hiding in the back-end stuff). 
+            
+                </p></li></ul>
+            </li>
 
 
         
 
-                <p> &cir;  <b>Length:</b> Alt text is limited to 100-250 characters, while image descriptions can be longer, like 280 characters, which is the length of a tweet.</p>
+                <li>
+                    <b>Length:</b> 
+                    <ul>
+                        <li style="padding-bottom: 35px;">
+                    Alt text is typically limited to around 100-250 characters, while image descriptions can be longer.</li>
+                    </ul>
+                </li>
 
-                <p style="padding-bottom: 20px;">&cir; <b>Level of Detail:</b> Image descriptions can offer more detail about visual elements compared to alt text because of their larger character limit. For instance, alt text might say "puddle on the floor," while an image description might describe it as "a puddle of orange juice on a white tiled kitchen floor."</p>
+                <li style="padding-bottom: 20px;"> <b>Level of Detail:
+                </b> 
+                    <ul>
+                        <li>
+                    Image descriptions can offer more detail about visual elements compared to alt text because of their larger character limit. For instance, alt text might say "puddle on the floor," while an image description might describe it as "a puddle of orange juice on a white tiled kitchen floor."
+                        </li>
+                    </ul>
+                </li>
+
+
+                </ul>
                 
     
 
@@ -366,38 +421,85 @@
                 <h2 style="margin-top: 45px;">Here are some examples of alt text: </h2>
 
                 <figure class="image-center">
-                        <img src="../pics/tree-frog.jpg" alt=" " style="width: 60%; padding-top: 20px; padding-bottom: 20px;">
+                        <img src="../pics/tree-frog.jpg" alt=" " style="width: 60%; padding-top: 40px; padding-bottom: 20px;">
                     </a>
-                        <figcaption style="text-align: left; padding-left: 10px;"> "Close-up shot of a small, green treefrog clinging to the center of an orange flower."
+                        <figcaption style="text-align: center; padding-left: 10px; padding-bottom: 20px; position: relative; bottom: 10px;"> "Close-up shot of a small, green treefrog clinging to the center of an orange flower."
                             <a href="https://www.freepik.com/free-photo/australian-white-tree-frog-sitting-flower_17721898.htm#query=orange%20frog&position=0&from_view=keyword&track=ais&uuid=98768eff-119a-4064-bbae-ce52fbece170"> (Image by kuritafsheen77</a> on Freepik)
                         </figcaption>
                         </figure>
             
                         <figure class="image-center">
                             <img src="../pics/bitter-sneezeweed.jpg" alt=" " style="width: 60%; padding-top: 40px; padding-bottom: 20px;">
-                            <figcaption> "Small, bright yellow wildflowers amongst a bed of green grass."
+                            <figcaption style="padding-bottom: 20px; position: relative; bottom: 10px;"> "Small, bright yellow wildflowers amongst a bed of green grass."
                             </figcaption>
                             </figure>
             
-                        <figure class="image-center">
-                            <img src="../pics/dog-getting-kisses-by-cows.jpg" alt=" " style="width: 50%; padding-top: 40px; padding-bottom: 20px;">
-                            <figcaption style="text-align: left; padding-left: 10px;"> "A dog wears an enormous smile while getting kisses and attention from a group of cows." 
-                                <a href="https://www.are.na/block/623323" target="_blank" rel="noreferrer noopener"> Image source </a>
-                                </figcaption>
-                        </figure>
+                        <div class="image-center">
+                            <img src="../pics/dog-getting-kisses-by-cows.jpg" alt=" " style="width: 50%; padding-top: 40px; padding-bottom: 20px;"><br>
+
+                         
+                                <a href="https://www.are.na/block/623323" target="_blank" rel="noreferrer noopener" style="position: relative; bottom: 15px;"> Image source </a>
+                    
+                            <p style="text-align: left; padding-left: 10px; padding-bottom: 20px; position: relative; bottom: 10px;">    
+                                "A dog wears an enormous smile while getting kisses and attention from a group of cows."
+                            </p>
+                            </div>
         
 
 
-                <h2>Now here are some examples of <br>image descriptions:</h2>
+                <h2 style="position: relative; bottom: 15px;">Now here are some examples of <br>image descriptions:</h2>
 
-                <p> <span style="background-color: yellow;">(Need to find examples) </span> </p>
+                <img src="../pics/frog-with-butterfly-hat.png" style="width: 60%; padding-top: 30px;" alt="Screenshot of 2 photos with a tree frog and butterfly.">
 
-                <h2>Other examples:</h2>
+                <a href="https://www.are.na/block/17371201" target="_blank" rel="noreferrer noopener" style="padding-top: 15px;">Image Source</a>
+                
+                <p style="padding-bottom: 40px; padding-top: 10px;">"Two photos stacked on top of one another. Both photos show a small, green treefrog and an orange butterfly clinging to a thin branch. In the top photo, it appears as if the frog and butterfly are kissing or touching noses. In the bottom photo, the butterfly sits on the frog's head- appearing almost like a hat."
+                </p>
+
+
+                <img src="../pics/nasa2.png" alt="Stars in outer space." style="width: 60%;">
+
+
+                <p style="position: relative; bottom: 15px;"> <div class="image-center" style="position: relative; bottom: 15px;">
+                    <a href="https://webbtelescope.org/contents/media/images/2022/035/01G7DCWB7137MYJ05CSH1Q5Z1Z" target="_blank" rel="noreferrer noopener">
+                        
+                    Image Source</a> </div> </p>
+                    
+                    <br>
+                    <p style="position: relative; bottom: 55px;"><i>Image description written by STCI (Space Telescope Science Institute) for NASA</i>
+                </p>
+
+                <p style="position: relative; bottom: 45px;">"This image shows many overlapping objects at various distances. They include foreground stars, galaxies in a galaxy cluster, and distorted background galaxies behind the galaxy cluster. <br><br>
+
+                    The background of space is black. Thousands of small galaxies appear across the image. Their colors vary. Some are shades of orange, others are white. Most appear as fuzzy ovals, but a few have distinctive spiral arms. <br><br>
+                    
+                    In front of the galaxies are several foreground stars. Most appear blue with diffraction spikes, forming eight-pointed star shapes. Some look as large as the galaxies that appear next to them. <br><br>
+                    
+                    A very bright star is slightly off center. It has eight blue, long diffraction spikes. In the center of the image, between 4 o’clock and 6 o’clock in the bright star’s spikes, are several bright, white galaxies. 
+                    These are members of the galaxy cluster. <br><br>
+                    
+                    There are also many thin, long, orange arcs. They follow invisible concentric circles that curve around the center of the image. These are images of background galaxies that have been stretched and distorted by the foreground galaxy cluster."<br><br>
+                    
+                </p>
+
+                <h2 style="position: relative; bottom: 50px;">Other examples:</h2>
 
                 <ul>
 
-                <li>
-                    <a href="https://alt-text-as-poetry.net/blog/" target="_blank" rel="noreferrer noopener">Alt Text as Poetry Study Club</a> (examples of both alt text / image descriptions)
+                <li style="position: relative; bottom: 35px;">
+                    <a href="https://alt-text-as-poetry.net/blog/" target="_blank" rel="noreferrer noopener">Alt Text as Poetry Study Club</a> 
+                    <ul>
+                        <li>Examples of both alt text and image descriptions.
+                        </li>
+                    </ul>
+                </li>
+
+                <li style="position: relative; bottom: 25px;">
+                    <a href="https://alttexthalloffame.org/en/#what-to-write" target="_blank" rel="noreferrer noopener">Alt Text Hall of Fame</a>
+                    <ul>
+                        <li>The "what to write" section shows examples of image descriptions and extensive (longer) alt text.
+                        </li>
+                    </ul>
                 </li>
 
             </ul>

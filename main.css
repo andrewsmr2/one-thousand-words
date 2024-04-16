@@ -31,15 +31,20 @@
     width: fit-content;
 
     background-color: white;
-    height: 50px;
-    border: 2px solid;
-    border-radius: 3px; 
-  
-    font-size: 1.5rem;
-    padding: 10px;
+    margin-bottom: 30px;
 
-    position: relative;
-    top: -15px;
+    border: 2px solid;
+    font-size: 1.5rem;
+    border-radius: 3px; 
+
+    cursor: pointer;
+    padding: 10px;
+  
+
+    position: absolute;
+    bottom: 0;
+
+
 
     cursor: pointer;
 
@@ -309,8 +314,30 @@ h2 {
     left: 5px;
     }
 
+
+.middle-section-practice-photos {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}
+
 .middle-section li {
     max-width: 700px;
+}
+
+.mobile-tablet {
+    background-color: white;
+    color: black;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 50000000;
+}
+
+.mobile-tablet p {
+    position: relative;
+    left: 20px;
 }
 
 .next-page {
@@ -361,10 +388,17 @@ p {
     margin-bottom: 10px;
 }
 
-/* .practice-photo {
-    cursor: pointer;
-    width: fit-content;
-} */
+.photo-container {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
 
 .practice-photo:hover {
     transform: rotate(3deg);
@@ -417,6 +451,30 @@ p {
     background-color:black;
     color:white;
   }
+
+  .title {
+    background-color:white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 100%;
+}
+
+.title h1 {
+
+    width: 100%;
+    position: relative;
+    left: .1px;
+    border-left: none;
+    border-right: none;
+}
+
+.title p {
+    position: relative;
+    bottom: 2px;
+    left: 17px;
+}
 
 .top-menu {
     background-color: white;
@@ -511,6 +569,7 @@ label.color-change-2 {
 }
 
 
+
 /* ----------------- PRACTICE PAGES -----------------  */
 
 
@@ -598,3 +657,62 @@ label.color-change-2 {
     height: 100px;
     gap: 10px;
 }
+
+
+/* ______________________________________________________________________ */
+
+@media only screen and (max-width: 320px) {
+    .mobile-tablet {
+        display: block;
+    }
+
+    .left-section {
+        display: none;
+    }
+
+    .middle-section {
+        display: none;
+    }
+
+    .right-section {
+        display: none;
+    }
+      }
+    
+      @media only screen and (max-width: 480px) {
+        .mobile-tablet {
+            display: block;
+        }
+
+        .left-section {
+            display: none;
+        }
+
+        .middle-section {
+            display: none;
+        }
+
+        .right-section {
+            display: none;
+        }
+
+          }
+    
+          @media only screen and (max-width: 768px) {
+            .mobile-tablet {
+                display: block;
+            }
+
+            .left-section {
+                display: none;
+            }
+
+            .middle-section {
+                display: none;
+            }
+
+            .right-section {
+                display: none;
+            }
+
+              }

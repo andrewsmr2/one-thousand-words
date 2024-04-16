@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Hover Effect</title>
+<style>
+  .container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .image {
+    display: block;
+    width: 300px;
+    height: 200px;
+    transition: opacity 0.5s ease;
+  }
+
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .container:hover .image {
+    opacity: 0;
+  }
+
+  .container:hover .text {
+    opacity: 1;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img class="image" src="../pics/scans/bee-on-yellow-flower.png" alt="Hover Image">
+  <div class="text">Bee on a yellow flower</div>
+</div>
+
+<script>
+  // You can add JavaScript here if needed
+</script>
+
+</body>
+</html>

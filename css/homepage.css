@@ -28,23 +28,27 @@
 
 
 .back {
+    width: fit-content;
+
     background-color: white;
-    height: 50px;
-    border: none;
-    border-right: 2px solid;
-    border-left: 2px solid;
+    margin-bottom: 30px;
 
-
-    position: absolute;
-    left: 20vw;
-    top: 0;
-  
+    border: 2px solid;
     font-size: 1.5rem;
-    padding: 10px;
+    border-radius: 3px; 
 
     cursor: pointer;
     padding: 10px;
-    text-align: left; /* Align text to left */
+  
+
+    position: absolute;
+    bottom: 0;
+
+
+
+    cursor: pointer;
+
+
 }
 
 .back:hover {
@@ -64,10 +68,6 @@ line-height: 1.5;
 body.comic-sans {
     font-family: 'comic sans'
     }
-
-li.comic-sans {
-    font-family: 'comic sans';
-}
       
 body.open-dyslexic {
     font-family: 'open dyslexic';
@@ -150,8 +150,12 @@ body.serif {
     display: none;
     flex-direction: column;
     align-items: center; /* Center align items */
+    /* border-bottom: 2px solid; */
     border-top: 2px solid;
-    border-right: 2px solid;
+}
+
+.customize-icon-dark-mode {
+    display: none;
 }
 
 .customize.open {
@@ -162,6 +166,12 @@ body.serif {
     align-items: center;
 }
 
+.demo-container {
+    display: flex;
+   flex-direction: column;
+   gap: 10px;
+   padding: 10px;
+}
 
 
 .font-selector {
@@ -171,96 +181,79 @@ body.serif {
     gap: 2px;
   }
 
-.homepage-list {
-    width: 100vw;
-    height: 60px;
-    border-bottom: 2px solid;
-    background-color: white;
-    position: fixed;
-   top: 0;
-   left: 0;
-    margin: 0;
-    margin-bottom: 50px;
-    padding: 10px;
-
-    display: flex;
-}
-
-/* .homepage-list-li {
-    border-left: 2px solid;
-    border-right: 2px solid;
-} */
-
 
 h1 {
-    position: fixed;
-    bottom: 100px;
-    background-color:white;
-    color:#ab5b0b;
+    background-color: white;
     text-align: center;
     padding-top: 3px;
 border: 2px solid;
-    width: 20vw;
+    width: 100%;
     margin: 0;
-    padding: 10px;
+    position: relative;
+    right: 5px;
 }
 
 h2 {
     text-align: center;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    width: 20vw;
+    border: 2px solid;
+    width: 100%;
     padding: 10px;
-
-    position: fixed;
-    bottom: 0;
-    margin: 0;
+    position: relative;
+    right: 5px;
     
 }
 
+img {
+    border: 2px solid;
+}
 
-/* .left-section {
+.image-center {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.instructions {
+    max-width: 800px;
+}
+
+
+.left-section {
+
     width: 20vw;
     height: 100vh;
-
-    border-right: 2px solid;
-
  
+    position: fixed;
+    top:0;
+    left: 0;
 
     z-index: 1;
-} */
-
-li:hover {
-border-left: 20px solid;
-border-right: 20px solid;
-border-top: 2px solid;
-border-bottom: 2px solid;
-border-radius: 5px;
-
-padding-left: 10px;
-padding-right: 10px;
-
 }
 
 .main-container {
     display: flex;
 }
 
+.main-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
 .menu-button {
     width: 20vw;
     background-color: transparent;
-    height: 60px;
+    height: 50px;
     border: none;
   
     font-size: 1.5rem;
-    /* padding: 10px; */
+    padding: 10px;
 
     cursor: pointer;
     padding: 10px;
     text-align: left; /* Align text to left */
 }
-
-
 
 .menu-button:hover {
     font-size: 1.6rem;
@@ -295,26 +288,57 @@ padding-right: 10px;
     border-right: 20px solid;
     width: fit-content;
     padding-right: 15px;
+    border-radius: 3px;
     }
 
 .middle-section {
-    width: 100vw;
-    height: 100vh;
-
+    width: 80vw;
+/* 
     padding-top: 50px;
-    border-left: 2px solid;
-
+    padding-left: 20px;
+    padding-right: 20px; */
    
 
     display: flex;
-    flex-direction: column;
 
+
+    position: relative;
+    left: 0;
 
 }
 
+.middle-section p {
+    max-width: 700px;
+    font-size: 1.2rem;
+    text-align: left;
+    position: relative;
+    left: 5px;
+    }
+
+
+.middle-section-practice-photos {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}
 
 .middle-section li {
     max-width: 700px;
+}
+
+.mobile-tablet {
+    background-color: white;
+    color: black;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 50000000;
+}
+
+.mobile-tablet p {
+    position: relative;
+    left: 20px;
 }
 
 .next-page {
@@ -325,6 +349,24 @@ padding-right: 10px;
    gap: 5px;
 }
 
+.next-page-button {
+    background-color: white;
+
+    width: fit-content;
+    height: fit-content;
+
+    margin-bottom: 30px;
+
+    border: 2px solid;
+    font-size: 1.5rem;
+    border-radius: 3px; 
+
+    position: relative;
+    bottom: 0;
+
+    cursor: pointer;
+    padding: 10px;
+        }
 
 .next-page-button:hover {
     background-color:#cfd1ed;
@@ -343,28 +385,56 @@ padding-right: 10px;
     display: block; /* Show menu items when menu is opened */
 }
 
+p {
+    margin-bottom: 10px;
+}
+
 .photo-container {
-    height: 100vh;
-    width: 80vw;
-    z-index: -1;
+    width: 100%;
     position: absolute;
-    left: 20vw;
+    top: 10px;
+    left: 10px;
 
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
 
-    overflow-y: scroll;
 }
 
-.right-section {
+
+.practice-photo:hover {
+    transform: rotate(3deg);
+    cursor: pointer;
+    /* border: 2px solid; */
+    
+}
+
+.practice-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.practice-photo-container a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: fit-content;
+}
+
+ .right-section {
     width: 20vw;
     height: 100vh;
 
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 1;
-    border-left: 2px solid;
+
+     z-index: 1; 
 }
 
 .select-font {
@@ -379,12 +449,36 @@ padding-right: 10px;
     border: 1.5px solid;
   }
 
-
   .select-font-button:hover {
     background-color:black;
     color:white;
   }
 
+  .title {
+    background-color: white;
+    width: 20vw;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 8000;
+    border: 2px solid;
+    border-right: none;
+    border-bottom: none;
+}
+
+.title p {
+    text-align: center;
+    border-top: 2px solid;
+    padding-top: 10px;
+}
+
+.title h1 {
+    border: none;
+    position: relative;
+    left: 17px;
+    top: 12px;
+    width: fit-content;
+}
 
 .top-menu {
     background-color: white;
@@ -396,13 +490,28 @@ padding-right: 10px;
     transition: width 0.3s ease;
 }
 
-
-ul {
+.top-bar-homepage {
+    width: 79.12vw;
+    height: 55px;
+    position: fixed;
+    bottom: 31.5px;
+    z-index: 70000;
+    background-color: white;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    flex-wrap: wrap;
     align-items: center;
+
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    padding-top: 2px;
 }
+
+.top-bar-homepage li {
+    display: flex;
+    flex-direction: row;
+}
+
 
 
 
@@ -417,7 +526,18 @@ body.color-change-1 {
     border: none;
 }
 
+
 /* COLOR CHANGE 2 (BLACK BACKGROUND WHITE TEXT)  */
+
+.back.color-change-2 {
+    background-color: black;
+}
+
+.back.color-change-2:hover {
+    background-color: black;
+    border-right: 20px solid;
+    border-left: 20px solid;
+}
 
 body.color-change-2 {
     background-color: black;
@@ -426,15 +546,10 @@ body.color-change-2 {
 
 h1.color-change-2 {
     background-color: black;
-    color: white;
 }
 
 a.color-change-2 {
     color: #addf9d;
-}
-
-.homepage-list.color-change-2 {
-    background-color: black;
 }
 
 .customize-icon-dark-mode.color-change-2 {
@@ -472,3 +587,161 @@ label.color-change-2 {
     box-shadow: 0 0 30px white;
 }
 
+.next-page-button:hover.color-change-2 {
+    background-color: black;
+    border-right: 20px solid;
+    border-left: 20px solid;
+
+}
+
+.title.color-change-2 {
+    background-color: black;
+}
+
+
+/* ----------------- PRACTICE PAGES -----------------  */
+
+
+
+#container {
+    position: relative;
+    width: 80vw;
+    max-width: 400px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* margin-top: 10px; */
+    margin-bottom: 25px; 
+}
+#photo {
+    width: 100%; /* Adjust photo width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#input-field {
+    width: 100%; 
+    height: 85px; 
+    margin-bottom: 10px; 
+    text-wrap: wrap;
+}
+#submit-button {
+    width: 80px; /* Adjust width of submit button */
+    height: 40px; /* Adjust height of submit button */
+}
+.submission {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Add space between submissions */
+}
+.delete-button {
+    margin-left: 10px; /* Add space between delete button and submission text */
+    padding: 5px; /* Add padding to delete button */
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    transform: rotate(15deg);
+}
+
+#output {
+    width: 750px;
+    
+    overflow-y: auto; /* Add vertical scrollbar if content exceeds height */
+    /* padding: 10px; */
+}
+#char-counter-container {
+    padding: 5px 3px 1px 10px;
+    border: 1px solid;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+#char-label {
+    font-size: 14px;
+
+    margin-right: 5px;
+}
+#char-counter {
+    font-size: 14px;
+    position: relative;
+    top: 2px;
+
+
+}
+
+.input-char-counter-container {
+    display: flex;
+    flex-direction: row;
+    width: 750px;
+    height: 100px;
+    gap: 10px;
+}
+
+
+/* ______________________________________________________________________ */
+
+@media only screen and (max-width: 320px) {
+    .mobile-tablet {
+        display: block;
+    }
+
+    .left-section {
+        display: none;
+    }
+
+    .middle-section {
+        display: none;
+    }
+
+    .right-section {
+        display: none;
+    }
+      }
+    
+      @media only screen and (max-width: 480px) {
+        .mobile-tablet {
+            display: block;
+        }
+
+        .left-section {
+            display: none;
+        }
+
+        .middle-section {
+            display: none;
+        }
+
+        .right-section {
+            display: none;
+        }
+
+          }
+    
+          @media only screen and (max-width: 768px) {
+            .mobile-tablet {
+                display: block;
+            }
+
+            .left-section {
+                display: none;
+            }
+
+            .middle-section {
+                display: none;
+            }
+
+            .right-section {
+                display: none;
+            }
+
+              }
