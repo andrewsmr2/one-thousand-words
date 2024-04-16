@@ -37,7 +37,7 @@ $("#font-selector").change(function() {
       $(".next-page-button").toggleClass("color-change-2");
       $(".back").toggleClass("color-change-2");
       $(".title").toggleClass("color-change-2");
-      
+      $(".top-bar-homepage").toggleClass("color-change-2");
 
     }
   );
