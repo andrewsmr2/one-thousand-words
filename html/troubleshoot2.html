@@ -8,11 +8,53 @@
         <html lang="en">
                 
         <link rel="stylesheet" href="../css/troubleshoot.css">
+
+        <style>
+
+@font-face {
+    font-family: 'open dyslexic';
+    src: url('../fonts/opendyslexic-regular-webfont.woff2') format('woff2'),
+        url('../fonts/opendyslexic-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+body {
+    font-family: sans-serif;
+    background-color: lightblue;
+    color: darkslategray;
+}
+
+body.color-change-1 {
+    background-color: white;
+    color: black;
+}
+
+body.color-change-2 {
+    background-color: black;
+    color: white;
+}
+
+body.serif {
+    font-family: serif;
+}
+
+body.open-dyslexic {
+    font-family: 'open dyslexic';
+}
+
+.customize {
+    display: flex; 
+    flex-direction: column;
+    gap: 15px;
+}
+
+         </style>
     </head>
 
 <body>
 
-    <a href="troubleshoot2.html">New page</a> 
+    <a href="troubleshoot.html">Old page</a> 
 
     <h1>Sample text</h1>
     <p> sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text </p>
@@ -45,6 +87,64 @@
 
 <script src="../javascript/jquery-3.7.1.min.js"></script>
 <script src="../javascript/troubleshoot.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Apply saved preferences when the page loads
+        applyPreferences();
+    
+        // Event listener for font selection
+        $('#font-selector').change(function() {
+            var font = $(this).val();
+            $('body').removeClass().addClass(font);
+            // Save font preference to local storage
+            localStorage.setItem('fontPreference', font);
+        });
+    
+        // Event listener for color change 1 button
+        $('.color-change-1').click(function() {
+            $(this).toggleClass('active');
+            $('body').toggleClass('color-change-1');
+            // Save color preference to local storage
+            localStorage.setItem('color1Preference', $(this).hasClass('active'));
+        });
+    
+        // Event listener for color change 2 button
+        $('.color-change-2').click(function() {
+            $(this).toggleClass('active');
+            $('body').toggleClass('color-change-2');
+            // Save color preference to local storage
+            localStorage.setItem('color2Preference', $(this).hasClass('active'));
+        });
+    
+        // Function to apply saved preferences from local storage
+        function applyPreferences() {
+            var font = localStorage.getItem('fontPreference');
+            if (font) {
+                $('body').removeClass().addClass(font);
+                $('#font-selector').val(font);
+            }
+    
+            var color1 = localStorage.getItem('color1Preference');
+            if (color1 === 'true') {
+                $('.color-change-1').addClass('active');
+                $('body').addClass('color-change-1');
+            }
+    
+            var color2 = localStorage.getItem('color2Preference');
+            if (color2 === 'true') {
+                $('.color-change-2').addClass('active');
+                $('body').addClass('color-change-2');
+            }
+        }
+    });
+    </script>
+    
+    
+    
+    
+
+  
 
 
 </body>
