@@ -15,7 +15,7 @@ $("#font-selector").change(function() {
       $("a").toggleClass("color-change-1");
       $(".menu-button").toggleClass("color-change-1");
       $(".right-section").toggleClass("color-change-1");
-
+      $("h1").toggleClass("color-change-1");
     }
   );
 
@@ -41,6 +41,8 @@ $("#font-selector").change(function() {
       $(".top-bar-homepage").toggleClass("color-change-2");
       $("p").toggleClass("color-change-2");
       $(".right-section").toggleClass("color-change-2");
+      $(".customize").toggleClass("color-change-2");
+      $(".color-change-container").toggleClass("color-change-2");
 
     }
   );

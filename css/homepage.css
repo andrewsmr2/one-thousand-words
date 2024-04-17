@@ -632,6 +632,15 @@ p.color-change-2 {
     background-color: black;
 }
 
+.customize.color-change-2 {
+    border-top: 2px solid white;
+}
+
+.color-change-container.color-change-2 {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
 
 
 

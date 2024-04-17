@@ -202,6 +202,7 @@ h1 {
     text-align: center;
     padding-top: 3px;
     border: 2px solid;
+    outline: 2px solid coral;
     border-radius: 5px;
     width: 100%;
     margin: 0;
@@ -526,6 +527,10 @@ a.color-change-1 {
     color: blue;
 }
 
+h1.color-change-1 {
+    outline: none;
+}
+
 
 /* COLOR CHANGE 2 (BLACK BACKGROUND WHITE TEXT)  */
 
@@ -535,8 +540,8 @@ a.color-change-1 {
 
 .back.color-change-2:hover {
     background-color: black;
-    border-right: 20px solid;
-    border-left: 20px solid;
+    box-shadow: 0 0 30px white;
+
 }
 
 body.color-change-2 {
@@ -547,6 +552,7 @@ body.color-change-2 {
 h1.color-change-2 {
     background-color: black;
     color: white;
+    outline: none;
 }
 
 a.color-change-2 {
@@ -590,9 +596,17 @@ label.color-change-2 {
 
 .next-page-button:hover.color-change-2 {
     background-color: black;
-    border-right: 20px solid;
-    border-left: 20px solid;
+    box-shadow: 0 0 30px white;
 
+}
+
+.customize.color-change-2 {
+    border-top: 2px solid white;
+}
+
+.color-change-container.color-change-2 {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
 }
 
 

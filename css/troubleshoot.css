@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'open dyslexic';
+    src: url('../fonts/opendyslexic-regular-webfont.woff2') format('woff2'),
+        url('../fonts/opendyslexic-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+body {
+    font-family: sans-serif;
+    background-color: lightblue;
+    color: darkslategray;
+}
+
+body.color-change-1 {
+    background-color: white;
+    color: black;
+}
+
+body.color-change-2 {
+    background-color: black;
+    color: white;
+}
+
+body.serif {
+    font-family: serif;
+}
+
+body.open-dyslexic {
+    font-family: 'open dyslexic';
+}
+
+
+
+
+
+.customize {
+    display: flex; 
+    flex-direction: column;
+    gap: 15px;
+}
