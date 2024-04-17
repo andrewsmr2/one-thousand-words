@@ -26,6 +26,13 @@
     font-style: normal;
     }
 
+    a:hover {
+        border-left: 4px solid;
+        border-right: 4px solid;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
 
 .back {
     width: fit-content;
@@ -56,8 +63,8 @@ background-color: #cfd1ed;
 }
 
 body {
-background-color:#cfd1ed;
-color:#ab5b0b;
+    background-color: #033838;
+    color: #f1e7be;
 margin: 0;
       
 font-family: "Alamari", sans-serif;
@@ -184,6 +191,7 @@ body.serif {
 
 h1 {
     background-color: white;
+    color: black;
     text-align: center;
     padding-top: 3px;
 border: 2px solid;
@@ -387,6 +395,7 @@ img {
 
 p {
     margin-bottom: 10px;
+    color: black;
 }
 
 .photo-container {
@@ -461,7 +470,7 @@ p {
     bottom: 0;
     right: 0;
     z-index: 8000;
-    border: 2px solid;
+    border: 2px solid black;
     border-right: none;
     border-bottom: none;
 }
@@ -482,7 +491,7 @@ p {
 
 .top-menu {
     background-color: white;
-    border-bottom: 2px solid;
+    border-bottom: 2px solid black;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -494,9 +503,10 @@ p {
     width: 79.12vw;
     height: 55px;
     position: fixed;
-    bottom: 31.5px;
+    bottom: 57px;
     z-index: 70000;
     background-color: white;
+    color: black;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -524,6 +534,10 @@ body.color-change-1 {
 
 .menu-button.color-change-1 {
     border: none;
+}
+
+.right-section.color-change-1 {
+    background-color: white;
 }
 
 
@@ -596,11 +610,30 @@ label.color-change-2 {
 
 .title.color-change-2 {
     background-color: black;
+    color: white;
+    border: 2px solid white;
 }
 
 .top-bar-homepage.color-change-2 {
     background-color: black;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
 }
+
+h1.color-change-2 {
+    color: white;
+}
+
+p.color-change-2 {
+    color: white;
+}
+
+.right-section.color-change-2 {
+    background-color: black;
+}
+
+
+
 
 
 /* ----------------- PRACTICE PAGES -----------------  */

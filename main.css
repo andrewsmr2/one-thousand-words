@@ -26,6 +26,12 @@
     font-style: normal;
     }
 
+    a {
+        color: #32a1f7;
+    }
+
+    
+
 
 .back {
     width: fit-content;
@@ -51,13 +57,21 @@
 
 }
 
+.back a {
+    color: black;
+}
+
 .back:hover {
 background-color: #cfd1ed;
+box-shadow: 0 0 15px white;
+
 }
 
 body {
-background-color:#cfd1ed;
-color:#ab5b0b;
+/* background-color:#cfd1ed;
+color:#ab5b0b; */
+background-color: #033838;
+color: #f1e7be;
 margin: 0;
       
 font-family: "Alamari", sans-serif;
@@ -183,10 +197,12 @@ body.serif {
 
 
 h1 {
+    color: black;
     background-color: white;
     text-align: center;
     padding-top: 3px;
-border: 2px solid;
+    border: 2px solid;
+    border-radius: 5px;
     width: 100%;
     margin: 0;
     position: relative;
@@ -367,8 +383,13 @@ h2 {
     padding: 10px;
         }
 
+        .next-page-button a {
+            color: black;
+        }
+
 .next-page-button:hover {
     background-color:#cfd1ed;
+    box-shadow: 0 0 15px white;
 }
 
 .open .close-button {
@@ -403,6 +424,7 @@ p {
 .practice-photo:hover {
     transform: rotate(3deg);
     cursor: pointer;
+    box-shadow: 0 0 15px white;
     /* border: 2px solid; */
     
 }
@@ -478,7 +500,7 @@ p {
 
 .top-menu {
     background-color: white;
-    border-bottom: 2px solid;
+    border-bottom: 2px solid black;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -498,6 +520,10 @@ body.color-change-1 {
 
 .menu-button.color-change-1 {
     border: none;
+}
+
+a.color-change-1 {
+    color: blue;
 }
 
 
@@ -520,6 +546,7 @@ body.color-change-2 {
 
 h1.color-change-2 {
     background-color: black;
+    color: white;
 }
 
 a.color-change-2 {
@@ -605,6 +632,11 @@ label.color-change-2 {
 #submit-button {
     width: 80px; /* Adjust width of submit button */
     height: 40px; /* Adjust height of submit button */
+}
+
+#submit-button:hover {
+   box-shadow: 0 0 10px white;
+   cursor: pointer;
 }
 .submission {
     display: flex;
