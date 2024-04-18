@@ -266,6 +266,8 @@ h2 {
 .main-text-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     align-items: center;
     max-width: 800px;
     padding: 20px;
