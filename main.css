@@ -200,6 +200,7 @@ body.serif {
 
 
 .font-selector {
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -280,7 +281,7 @@ h2 {
 }
 
 .menu-button:hover {
-    font-size: 1.6rem;
+
     border-left: 20px solid;
     }
 
@@ -792,3 +793,12 @@ label.color-change-2 {
             }
 
               }
+
+              @media only screen and (max-width: 1200px) {
+
+    
+                .mobile-disappear {
+                    display: none;
+                }
+    
+                  }
