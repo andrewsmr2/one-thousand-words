@@ -3,6 +3,10 @@ $("#font-selector").change(function() {
     // $('.changeMe').css("font-family", $(this).val());
   $("body").removeClass();
   $("body").addClass($(this).val());
+  $("h1").removeClass();
+  $("h1").addClass($(this).val());
+  $("p").removeClass();
+  $("p").addClass($(this).val());
   // $("button").removeClass();
   // $("button").addClass($(this).val());
   });

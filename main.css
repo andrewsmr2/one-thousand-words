@@ -210,9 +210,6 @@ h1 {
     right: 5px;
 }
 
-h1.open-dyslexic {
-    font-size: 1.2rem;
-}
 
 h2 {
     text-align: center;
@@ -357,8 +354,10 @@ h2 {
 }
 
 .mobile-tablet p {
+    padding: 15px;
     position: relative;
-    left: 20px;
+    left: 10px;
+    bottom: 10px;
 }
 
 .next-page {

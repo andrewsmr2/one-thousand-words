@@ -1,151 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title> Troubleshoot </title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: pink;
+            color: red;
+        }
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <html lang="en">
-                
-        <link rel="stylesheet" href="../css/troubleshoot.css">
-
-        <style>
-
-@font-face {
-    font-family: 'open dyslexic';
-    src: url('../fonts/opendyslexic-regular-webfont.woff2') format('woff2'),
-        url('../fonts/opendyslexic-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    }
-
-body {
-    font-family: sans-serif;
-    background-color: lightblue;
-    color: darkslategray;
+.show {
+    display: block !important;
 }
 
-body.color-change-1 {
-    background-color: white;
-    color: black;
-}
-
-body.color-change-2 {
-    background-color: black;
-    color: white;
-}
-
-body.serif {
-    font-family: serif;
-}
-
-body.open-dyslexic {
-    font-family: 'open dyslexic';
-}
-
-.customize {
-    display: flex; 
-    flex-direction: column;
-    gap: 15px;
-}
-
-         </style>
-    </head>
-
+        </style>
+</head>
 <body>
 
-    <a href="troubleshoot2.html">New page</a> 
+    <a href="troubleshoot2.html"> new page </a>
 
     <h1>Sample text</h1>
-    <p> sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text </p>
-
-
-    <div class="customize">
-            <div class="font-selector">
+    <p>sample text sample text sample text</p>
+    <div class="right-section">
+        <div class="top-menu" id="customizeMenu">
+            <button class="menu-button" onclick="toggleCustomize()"> 
+                Customize page
+            </button>
+            <button class="close-button" onclick="toggleCustomize()">&times;</button>
+            <div class="customize">
+                <div class="font-selector">
                     <label for="font-selector" class="select-font">Select font-type:</label> <br>
-
                     <select class="select-font-button" id="font-selector" autocomplete="off">
-
                         <option selected="selected" value="sans-serif">sans serif</option>
                         <option value="serif">serif</option>
                         <option value="open-dyslexic">open dyslexic</option>
-
+                        <option value="comic-sans">comic sans</option>
                     </select>
-            </div>
-      
-
+                </div>
+                <div class="color-change-container">
                     <div class="color-change-1">
                         <button class="light-mode-button">White background, <br> black text</button>
                     </div>
-
                     <div class="color-change-2">
                         <button class="dark-mode-button">Black background, <br> white text</button>
                     </div>
 
+                    <button id="reset-button">Reset to Default Settings</button>
+
+                </div>
+            </div>
+        </div>
     </div>
     
+    <script src="script.js"></script>
+    <script>
 
-<script src="../javascript/jquery-3.7.1.min.js"></script>
-<script src="../javascript/troubleshoot.js"></script>
+ // Function to toggle customization menu
+function toggleCustomize() {
+    var customizeMenu = document.getElementById("customizeMenu");
+    customizeMenu.classList.toggle("show");
+}
 
-<script>
-    $(document).ready(function() {
-        // Apply saved preferences when the page loads
-        applyPreferences();
-    
-        // Event listener for font selection
-        $('#font-selector').change(function() {
-            var font = $(this).val();
-            $('body').removeClass().addClass(font);
-            // Save font preference to local storage
-            localStorage.setItem('fontPreference', font);
-        });
-    
-        // Event listener for color change 1 button
-        $('.color-change-1').click(function() {
-            $(this).toggleClass('active');
-            $('body').toggleClass('color-change-1');
-            // Save color preference to local storage
-            localStorage.setItem('color1Preference', $(this).hasClass('active'));
-        });
-    
-        // Event listener for color change 2 button
-        $('.color-change-2').click(function() {
-            $(this).toggleClass('active');
-            $('body').toggleClass('color-change-2');
-            // Save color preference to local storage
-            localStorage.setItem('color2Preference', $(this).hasClass('active'));
-        });
-    
-        // Function to apply saved preferences from local storage
-        function applyPreferences() {
-            var font = localStorage.getItem('fontPreference');
-            if (font) {
-                $('body').removeClass().addClass(font);
-                $('#font-selector').val(font);
-            }
-    
-            var color1 = localStorage.getItem('color1Preference');
-            if (color1 === 'true') {
-                $('.color-change-1').addClass('active');
-                $('body').addClass('color-change-1');
-            }
-    
-            var color2 = localStorage.getItem('color2Preference');
-            if (color2 === 'true') {
-                $('.color-change-2').addClass('active');
-                $('body').addClass('color-change-2');
-            }
-        }
-    });
-    </script>
-    
-    
-    
-    
+// Function to apply light mode (white background, black text)
+function applyLightMode() {
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black";
+    localStorage.setItem("mode", "light");
+}
 
-  
+// Function to apply dark mode (black background, white text)
+function applyDarkMode() {
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+    localStorage.setItem("mode", "dark");
+}
 
+// Function to apply selected font family
+function applyFont() {
+    var fontSelector = document.getElementById("font-selector");
+    var selectedFont = fontSelector.value;
+    document.body.style.fontFamily = selectedFont;
+    localStorage.setItem("font", selectedFont);
+}
+
+// Function to reset to default settings
+function resetToDefault() {
+    localStorage.removeItem("mode");
+    localStorage.removeItem("font");
+    location.reload();
+}
+
+// Check for saved preferences in localStorage
+window.onload = function() {
+    var mode = localStorage.getItem("mode");
+    var font = localStorage.getItem("font");
+    
+    if (mode === "light") {
+        applyLightMode();
+    } else if (mode === "dark") {
+        applyDarkMode();
+    }
+    
+    if (font) {
+        document.body.style.fontFamily = font;
+        document.getElementById("font-selector").value = font;
+    }
+}
+
+// Event listeners for mode buttons
+document.querySelector(".light-mode-button").addEventListener("click", applyLightMode);
+document.querySelector(".dark-mode-button").addEventListener("click", applyDarkMode);
+
+// Event listener for font selector
+document.getElementById("font-selector").addEventListener("change", applyFont);
+
+// Event listener for reset button
+document.getElementById("reset-button").addEventListener("click", resetToDefault);
+
+
+        </script>
 
 </body>
 </html>
