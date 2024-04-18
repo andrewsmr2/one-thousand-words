@@ -200,7 +200,6 @@ body.serif {
 
 
 .font-selector {
-    padding: 20px 0;
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -319,9 +318,9 @@ h2 {
 .middle-section {
     width: 60vw;
 
-    padding-top: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-top: 50px;
+
+    padding: 20px;
   
 
     border-left: 2px solid;
