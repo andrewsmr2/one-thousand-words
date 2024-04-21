@@ -241,6 +241,7 @@ h1 {
 h2 {
     text-align: center;
     border: 2px solid;
+    border-radius: 5px;
     width: 100%;
     padding: 10px;
     position: relative;
