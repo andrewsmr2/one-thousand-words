@@ -228,8 +228,6 @@ h1 {
 }
 
 
-
-
 h2 {
     text-align: center;
     border: 2px solid;
@@ -374,7 +372,7 @@ p.comic-sans {
 }
 
 .photo-container {
-    width: 100%;
+
     position: absolute;
     top: 10px;
     left: 10px;
@@ -382,6 +380,8 @@ p.comic-sans {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    
+    overflow-y:scroll;
 }
 
 

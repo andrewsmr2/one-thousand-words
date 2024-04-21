@@ -20,6 +20,7 @@ $("#font-selector").change(function() {
       $(".menu-button").toggleClass("color-change-1");
       $(".right-section").toggleClass("color-change-1");
       $("h1").toggleClass("color-change-1");
+      $(".practice-photo").toggleClass("color-change-1");
     }
   );
 
@@ -47,6 +48,7 @@ $("#font-selector").change(function() {
       $(".right-section").toggleClass("color-change-2");
       $(".customize").toggleClass("color-change-2");
       $(".color-change-container").toggleClass("color-change-2");
+      $(".menu-items").toggleClass("color-change-2");
 
     }
   );
