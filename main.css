@@ -587,7 +587,7 @@ p {
 }
 
 .zine-container {
-    max-width: 45%;
+    max-width: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
